@@ -1,0 +1,734 @@
+GLOBAL_ABILITY: # Global ability cooldown
+  ENABLED: true
+  COOLDOWN: 10
+  DISABLE_IN_CITADEL: true
+  DISABLE_IN_EVENTS: true
+  DISABLE_IN_NETHER: true
+  DISABLE_IN_END: true
+  DISABLE_IN_RADIUS: 1000 # -1 no change
+
+ABILITY_MENUS:
+  LIST_TITLE: '&dAbility List'
+  LIST_SIZE: 45
+  TOGGLE_TITLE: '&dAbility Toggle'
+  TOGGLE_SIZE: 45
+
+ACTION_BAR_COOLDOWN:
+  BARS_AMOUNT: 12
+  SYMBOL: '▋'
+  NON_COMPLETE_COLOR: '&c'
+  COMPLETE_COLOR: '&a'
+  ACTION_BAR: '&d%abilityname% &r%actionbar% &7%remaining%'
+
+SWITCHER:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lSwitcher'
+  MATERIAL: 'SNOW_BALL' # Only egg/snowball works.
+  COOLDOWN: 30
+  ADD_GLOW: true
+  DATA: 0
+  DISTANCE: 8
+  ALLOW_TEAMMATE: true # Allow snowballing teammates.
+  LORE:
+    - '&7Throw this snowball at a player to switch'
+    - '&7positions with them, max range of 8 blocks.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+LIGHTNING:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lThunderbolt'
+  MATERIAL: 'GOLD_INGOT'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  CHANCE: 20 # Chance of striking lightning
+  SECONDS: 10 # How long do we strike lightning for
+  DAMAGE: 1.5 # When struck with lightning how much damage should we do
+  LORE:
+    - '&7Right click this item and for the next'
+    - '&710 seconds you have a chance to strike'
+    - '&7your opponent with lightning dealing -1.5'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+COMBO_ABILITY:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lCombo Ability'
+  MATERIAL: 'RAW_FISH'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 3
+  MAX_HITS: 12
+  SECONDS: 10 # How long till they get the effect
+  AMOUNT_PER_HIT: 1 # How many seconds should we put per hit
+  EFFECT: 'INCREASE_DAMAGE, 2' # Duration determined by hits
+  LORE:
+    - '&7Right click this item and for the next 10 seconds'
+    - '&7each hit you get will give you a second of strength'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+LUCKY_MODE:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lLucky Mode'
+  MATERIAL: 'INK_SACK'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 11
+  SECONDS: 10
+  MINIMUM_MULTIPLIER: -10.0
+  MAXIMUM_MULTIPLIER: 35.0
+  LORE:
+    - '&7Right click this item and for the next'
+    - '&7next 10 seconds you will be given a damage'
+    - '&7change from -10% to 35% extra damage.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+RAGE_BALL:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lRage Ball'
+  MATERIAL: 'EGG'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  DATA: 0
+  COOLDOWN_WHOLE_TEAM: true # Put the whole cooldown on rage ball cooldown?
+  RADIUS: 8 # Radius of the rage ball
+  EFFECT: 'EXPLOSION_LARGE'
+  FRIENDLY_EFFECTS:
+    - 'INCREASE_DAMAGE, 8s, 2'
+    - 'DAMAGE_RESISTANCE, 8s, 3'
+  ENEMY_EFFECTS:
+    - 'WITHER, 8s, 2'
+  LORE:
+    - '&7Throw this and when it lands every player'
+    - '&7in a radius of 8 blocks will be given effects:'
+    - '&7Teammates: Strength 2, Resistance 3'
+    - '&7Enemies: Wither 2'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+CRAFTING_CHAOS:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lCrafting Chaos'
+  MATERIAL: 'WORKBENCH'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  HITS_REQUIRED: 3
+  CHANCE: 20 # Chance of putting player in crafting table
+  SECONDS: 10 # Seconds of being crafting chaos
+  LORE:
+    - '&7Hit a player with this item and have'
+    - '&7have a chance of putting them in a'
+    - '&7crafting table when you hit them.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+FOCUS_MODE:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lFocus Mode'
+  MATERIAL: 'GOLD_NUGGET'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  DAMAGE_MULTIPLIER: 1.25 # 25% more damage
+  SECONDS: 10
+  HITS_VALID: 15 # How long ago did a player have to get hit to focus mode on them?
+  LORE:
+    - '&7Right click this item and the last person'
+    - '&7who hit you will take 25% more damage.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+NINJA_ABILITY:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lNinja Ability'
+  MATERIAL: 'NETHER_STAR'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  SECONDS: 3 # How long till teleporting?
+  HITS_VALID: 15 # How long ago did a player have to get hit to ninja star to them?
+  LORE:
+    - '&7Right click this item to teleport to'
+    - '&7the last person who hit you in 3s.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+ANTI_BUILD:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lExotic Bone'
+  MATERIAL: 'BONE'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  HITS_REQUIRED: 3
+  ANTI_BUILD_TIME: 15
+  DISABLED_INTERACT:
+    - CHEST
+    - FENCE_GATE
+    - TRAPPED_CHEST
+    - TRAP_DOOR
+  EFFECTS_DAMAGER: # The effects the damager gets
+    - 'SPEED, 10s, 3'
+  LORE:
+    - '&7Hit a player with this item 3 times and'
+    - '&7they will not be able to build, place or'
+    - '&7open blocks for 15s. You also get Speed 3.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+PORTABLE_ARCHER:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lPortable Archer'
+  MATERIAL: 'BOW'
+  COOLDOWN: 60
+  ADD_GLOW: true
+  DATA: 0
+  DURABILITY: 5 # 5 Uses
+  ENCHANTS:
+    - 'ARROW_INFINITE, 1'
+  LORE:
+    - '&7Shoot someone with this bow'
+    - '&7to archer tag them for 10s.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+    - '&cUnrepairable'
+
+INVISIBILITY:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lInvisibility'
+  MATERIAL: 'INK_SACK'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  INVIS_EFFECT: 'INVISIBILITY, 120s, 2'
+  TAKE_INVIS_ON_HIT: true
+  LORE:
+    - '&7Right click this item and you will be'
+    - '&7turned invisible even with armor on.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+TIME_WARP:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lTime Warp'
+  MATERIAL: 'FEATHER'
+  COOLDOWN: 90
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  PEARL_DELAY: 15 # How long ago did the pearl have to be thrown
+  DELAY: 2 # How long before getting teleported back
+  LORE:
+    - '&7Right click this item to teleport to'
+    - '&7your last pearl location in 2 seconds.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+POCKETBARD:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lPocket Bard'
+  MATERIAL: 'INK_SACK'
+  COOLDOWN: 60
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 14
+  LORE:
+    - '&7Right click this item to open the'
+    - '&7portable bard selection.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+  TYPES:
+    # Add as many below this.
+    # These are the items itself (not in menu!)
+    STRENGTH: # the name
+      NAME: '&6Strength II'
+      MATERIAL: 'BLAZE_POWDER'
+      DATA: 0
+      AMOUNT: 3
+      EFFECT: 'INCREASE_DAMAGE, 6s, 2'
+      LORE:
+        - '&7* &aTeam Members'
+    RESISTANCE: # The name
+      NAME: '&6Resistance III'
+      MATERIAL: 'IRON_INGOT'
+      DATA: 0
+      AMOUNT: 3
+      EFFECT: 'DAMAGE_RESISTANCE, 6s, 3'
+      LORE:
+        - '&7* &aTeam Members'
+    JUMP_BOOST: # The name
+      NAME: '&6Jump VII'
+      MATERIAL: 'FEATHER'
+      DATA: 0
+      AMOUNT: 3
+      EFFECT: 'JUMP, 6s, 7'
+      LORE:
+        - '&7* &aTeam Members'
+    SPEED: # The name
+      NAME: '&6Speed III'
+      MATERIAL: 'SUGAR'
+      DATA: 0
+      AMOUNT: 3
+      EFFECT: 'SPEED, 6s, 3'
+      LORE:
+        - '&7* &aTeam Members'
+  POCKETBARD_MENU:
+    TITLE: '&dPocketbard Selection'
+    SIZE: 9
+    ITEMS:
+      # Add as many below this.
+      # These are the items in the menu!
+      STRENGTH:
+        NAME: '&c3x Strength'
+        MATERIAL: 'BLAZE_POWDER'
+        SLOT: 1
+        DATA: 0
+        POCKET_BARD: 'STRENGTH' # Which pocket bard from above is this item representing?
+        LORE: { }
+      RESISTANCE:
+        NAME: '&73x Resistance'
+        MATERIAL: 'IRON_INGOT'
+        SLOT: 2
+        DATA: 0
+        POCKET_BARD: 'RESISTANCE' # Which pocket bard from above is this item representing?
+        LORE: { }
+      JUMP_BOOST:
+        NAME: '&a3x Jump'
+        MATERIAL: 'FEATHER'
+        SLOT: 3
+        DATA: 0
+        POCKET_BARD: 'JUMP_BOOST' # Which pocket bard from above is this item representing?
+        LORE: { }
+      SPEED:
+        NAME: '&b3x Speed'
+        MATERIAL: 'SUGAR'
+        SLOT: 4
+        DATA: 0
+        POCKET_BARD: 'SPEED' # Which pocket bard from above is this item representing?
+        LORE: { }
+
+BERSERK:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lBerserk'
+  MATERIAL: 'INK_SACK'
+  COOLDOWN: 180
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DENY_POT: true
+  DATA: 1
+  BERSERK_TIME: 8
+  DENY_POTION:
+    - 'SPLASH_POTION, 16421'
+  EFFECTS:
+    - 'INCREASE_DAMAGE, 8s, 2'
+    - 'DAMAGE_RESISTANCE, 8s, 3'
+    - 'REGENERATION, 8s, 3'
+  LORE:
+    - '&7Right click this item to receive godly'
+    - '&7effects but you are unable to pot for 8s'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+CLOSE_CALL:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lClose Call'
+  MATERIAL: 'COOKIE'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  HEALTH_REQUIRED: 3.5
+  EFFECTS:
+    - 'INCREASE_DAMAGE, 6s, 2'
+    - 'REGENERATION, 6s, 5'
+  LORE:
+    - '&7Right click this item to receive godly'
+    - '&7effects when you are lower than 3.5 hearts.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+SWITCH_STICK:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lSwitch Stick'
+  MATERIAL: 'STICK'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  CHANCE: 20
+  DEGREES: 180
+  TIME: 10
+  LORE:
+    - '&7Right click this item to start a 10 second'
+    - '&7period where you are able to turn around the'
+    - '&7player you are attacking.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+TELEPORT_EYE:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lTeleport Eye'
+  MATERIAL: 'INK_SACK'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 5
+  SECONDS: 3 # How long till teleporting?
+  HITS_VALID: 15 # How long ago did a player have to get hit to teleport to them?
+  LORE:
+    - '&7Right click this item when in water to teleport'
+    - '&7to the last player who hit you.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+SAMURAI:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lSamurai'
+  MATERIAL: 'DIAMOND_SWORD'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: false
+  DATA: 0
+  SECONDS: 3 # How long till teleporting?
+  HITS_VALID: 15 # How long ago did a player have to get hit to teleport to them?
+  ANTI_BUILD_TIME: 15
+  ENDER_PEARL_TIME: 16
+  EFFECTS_ON_TELEPORT:
+    - 'INCREASE_DAMAGE, 8s, 2'
+    - 'SPEED, 8s, 3'
+  LORE:
+    - '&7Right click this item to teleport to the last'
+    - '&7player who hit you while putting them under'
+    - '&7antibuild and enderpearl cooldown and receive'
+    - '&7overpowered effects.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+MAGIC_ROCK:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lMagic Rock'
+  MATERIAL: 'COAL'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  EFFECTS_PER_BLOCK:
+    - '2: INCREASE_DAMAGE, 8s, 2'
+    - '3: INCREASE_DAMAGE, 6s, 2'
+    - '4: INCREASE_DAMAGE, 4s, 2'
+    - '5: INCREASE_DAMAGE, 2s, 2'
+  LORE:
+    - '&7Hit a player with this item and you will receive'
+    - '&7effects dependent on the block above that player,'
+    - '&7the less space above the players head the more effects.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+BELCH_BOMB:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lBelch Bomb'
+  MATERIAL: 'SLIME_BALL'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  RADIUS: 8
+  EFFECTS:
+    - 'SLOW, 6s, 2'
+    - 'BLINDNESS, 6s, 2'
+  LORE:
+    - '&7Right click this item to give all enemies in a'
+    - '&7radius of 8 blocks slowness and blindness.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+ANTI_TRAP_STAR:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lAnti Trap Star'
+  MATERIAL: 'NETHER_STAR'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  SECONDS: 3 # How long till teleporting?
+  HITS_VALID: 15 # How long ago did a player have to get hit to teleport to them?
+  LORE:
+    - '&7Right click this item to teleport to the last'
+    - '&7person who hit you with a projectile.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+MED_KIT:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lMed Kit'
+  MATERIAL: 'PAPER'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  EFFECTS:
+    - 'DAMAGE_RESISTANCE, 8s, 3'
+    - 'REGENERATION, 8s, 3'
+    - 'ABSORPTION, 60s, 3'
+  LORE:
+    - '&7Right click to receive resistance,'
+    - '&7regeneration and absorption.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+ROCKET:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lRocket'
+  MATERIAL: 'FIREWORK'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  MULTIPLIER: 1.6
+  Y_VALUE: 0.8
+  LORE:
+    - '&7Right click to launch yourself,'
+    - '&7in the direction you facing.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+ANTI_TRAP_BEACON:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lAnti Trap Beacon'
+  MATERIAL: 'BEACON'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  RADIUS: 8
+  DESPAWN: 30
+  DENY_PLACE: true
+  DENY_BREAK: false
+  DENY_INTERACT: true
+  HITPOINTS: 10
+  DENIED_INTERACT:
+    - CHEST
+    - FENCE_GATE
+    - TRAPPED_CHEST
+    - TRAP_DOOR
+  LORE:
+    - '&7Place this beacon to deny block'
+    - '&7placing and interacting in a radius'
+    - '&7of 8 blocks.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+ANTI_PEARL:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lAnti Pearl'
+  MATERIAL: 'EYE_OF_ENDER'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  HITS_REQUIRED: 3
+  ENDERPEARL_SECONDS: 16
+  RIGHT_CLICK_REMOVE_CD: true
+  LORE:
+    - '&7Hit a player 3 times to put them'
+    - '&7on enderpearl cooldown for 16 seconds'
+    - '&7Or right click this item to remove your'
+    - '&7enderpearl cooldown.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+ULTIMATE_ABILITY:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lUltimate Ability'
+  MATERIAL: 'FIREBALL'
+  COOLDOWN: 120
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  SECONDS: 8
+  EFFECTS:
+    - 'DAMAGE_RESISTANCE, 8s, 3'
+    - 'REGENERATION, 8s, 3'
+    - 'INCREASE_DAMAGE, 8s, 2'
+  LORE:
+    - '&7Right click this item to save your location'
+    - '&7and receive effects and you will be teleported back'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+GRAPPLE:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lGrappler Ability'
+  MATERIAL: 'FISHING_ROD'
+  COOLDOWN: 20
+  ADD_GLOW: true
+  TAKE_ITEM: false
+  DATA: 0
+  MULTIPLIER: 0.25
+  Y_MULTIPLIER: 0.45
+  LORE:
+    - '&7Throw this item to be pulled towards'
+    - '&7the direction its thrown.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+TANK_INGOT:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lTank Ingot'
+  MATERIAL: 'IRON_INGOT'
+  COOLDOWN: 180
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  RADIUS: 10
+  DURATION_PER_PLAYER: 3
+  MAX_DURATION: 15
+  EFFECTS:
+    - 'DAMAGE_RESISTANCE, %duration%, 3'
+  LORE:
+    - '&7Right click this item to receive'
+    - '&7resistance dependent on the players.'
+    - '&7around you.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+TELEPORT_BOW:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lTeleport Bow'
+  MATERIAL: 'BOW'
+  COOLDOWN: 60
+  ADD_GLOW: true
+  DATA: 0
+  DURABILITY: 5 # 5 Uses
+  SECONDS: 3
+  ENCHANTS:
+    - 'ARROW_INFINITE, 1'
+  LORE:
+    - '&7Shoot someone with this bow'
+    - '&7to teleport to them in 3s.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+    - '&cUnrepairable'
+
+EXPLOSIVE_EGG:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lExplosive Egg'
+  MATERIAL: 'EGG'
+  COOLDOWN: 180
+  ADD_GLOW: true
+  DATA: 0
+  RADIUS: 8
+  MULTIPLIER: 0.30
+  Y_MULTIPLIER: 0.45
+  EFFECT: 'EXPLOSION_HUGE'
+  LORE:
+    - '&7Throw this at an area to pull'
+    - '&7all the players in a radius'
+    - '&7of 8 blocks towards you.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+PORTABLE_BARD:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lPortable Bard'
+  MATERIAL: 'MONSTER_EGG'
+  COOLDOWN: 180
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 51
+  NAME: '&d%player%''s Bard &c%health% ❤'
+  HEALTH: 10
+  RADIUS: 20 # radius for the bard
+  UPGRADE_EVERY: 15 # every 10s upgrade random effect
+  TIME_ALIVE: 60 # time bard is alive without being killed
+  ENTITY_TYPE: 'SKELETON' # can only be living entities!
+  EFFECTS:
+    RESISTANCE:
+      EFFECT: 'DAMAGE_RESISTANCE, 6s, 1'
+      EFFECT_UPGRADE: 'DAMAGE_RESISTANCE, 6s, 3'
+      MATERIAL: 'IRON_INGOT'
+    STRENGTH:
+      EFFECT: 'INCREASE_DAMAGE, 6s, 1'
+      EFFECT_UPGRADE: 'INCREASE_DAMAGE, 6s, 2'
+      MATERIAL: 'BLAZE_POWDER'
+    REGENERATION:
+      EFFECT: 'REGENERATION, 6s, 1'
+      EFFECT_UPGRADE: 'REGENERATION, 6s, 3'
+      MATERIAL: 'GHAST_TEAR'
+  LORE:
+    - '&7Place down this skeleton to imitate'
+    - '&7a bard. Must be in a radius of 20 blocks'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+PORTABLE_ROGUE:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lPortable Rogue'
+  MATERIAL: 'GOLD_SWORD'
+  COOLDOWN: 180
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  BACKSTAB_SOUND: 'ITEM_BREAK'
+  BACKSTAB_EFFECT: 'REDSTONE_BLOCK'
+  BACKSTAB_DAMAGE: 3.5
+  BACKSTAB_COOLDOWN: 3
+  BACKSTAB_EFFECTS:
+    - 'SLOW, 3s, 3'
+  LORE:
+    - '&7Hit a player in the back to imitate the rogue'
+    - '&7backstab ability.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+ANTITRAP_HALO:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lAnti-Trap Halo'
+  MATERIAL: 'BLAZE_ROD'
+  COOLDOWN: 180
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  DATA: 0
+  SECONDS_ANTI_BUILD: 30
+  RADIUS: 6
+  DENY_PLACE: true
+  DENY_BREAK: false
+  DENY_INTERACT: false
+  DENIED_INTERACT:
+    - 'CHEST'
+    - 'TRAPPED_CHEST'
+    - 'FENCE_GATE'
+  LORE:
+    - '&7Right click this ability to deny the'
+    - '&7placing of blocks for anyone in a'
+    - '&76 block radius for 30 seconds.'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'
+
+EFFECT_DISABLER:
+  ENABLED: true
+  DISPLAY_NAME: '&d&lEffect Disabler'
+  MATERIAL: 'SLIME_BALL'
+  COOLDOWN: 180
+  ADD_GLOW: true
+  TAKE_ITEM: true
+  HITS_REQUIRED: 3
+  TIME_DISABLED: 10
+  DATA: 0
+  LORE:
+    - '&7Hit a player 3 times with this item to take away'
+    - '&7their effects and block any new effects for 10s'
+    - ''
+    - '&d⁕ &fstore.azurite.cc &d⁕'

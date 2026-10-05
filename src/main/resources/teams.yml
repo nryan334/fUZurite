@@ -1,0 +1,209 @@
+TEAMS:
+  TEAM_SIZE: 5
+  ALLIES: 1
+  MAX_CLAIMS: 3
+  F_STUCK_MAX_MOVE: 5
+  DISBAND_WHILE_REGEN: false
+  KICK_WHILE_REGEN: false
+  JOIN_WHILE_REGEN: false
+  LEAVE_WHILE_REGEN: false
+  ALLOW_NEGATIVE_POINTS: true
+  TEAM_MAP_RADIUS: 25
+  NAME_MIN_LENGTH: 3
+  NAME_MAX_LENGTH: 10
+  ANNOUNCEMENT_MAX_LENGTH: 30
+
+TEAM_POINTS:
+  DEATH: 5
+  KILLS: 5
+
+WARZONE:
+  WARZONE_NORMAL: 1000
+  WARZONE_NETHER: 500
+  WARZONE_BREAK: 300
+  WARZONE_BREAK_NETHER: 200
+
+SYSTEM_TEAMS:
+  DENIED_INTERACT:
+    - 'CHEST'
+    - 'TRAPPED_CHEST'
+    - 'TRAP_DOOR'
+    - 'WOODEN_DOOR'
+    - 'FENCE_GATE'
+    - 'HOPPER'
+    - 'WOODEN_DOOR'
+    - 'DROPPER'
+    - 'DISPENSER'
+    - 'STONE_BUTTON'
+    - 'ENCHANTMENT_TABLE'
+    - 'CRAFTING_TABLE'
+    - 'BEACON'
+    - 'FURNACE'
+    - 'COMPARATOR'
+    - 'REPEATER'
+    - 'ANVIL'
+    - 'WOOD_BUTTON'
+    - 'LEVER'
+    - 'BURNING_FURNACE'
+    - 'IRON_DOOR_BLOCK'
+    - 'BREWING_STAND'
+  SAFEZONE: '&a%team%'
+  ROADS: '&6%team% Road'
+  EVENT: '&9%team%'
+  WARZONE: '&cWarzone'
+  WILDERNESS: '&7The Wilderness'
+  ORE_MOUNTAIN: '&3%team%'
+  GLOWSTONE: '&6%team%'
+  CITADEL: '&5%team%'
+  CONQUEST: '&4%team%'
+
+TEAM_DTR:
+  REGEN_PER_INTERVAL: 0.1 # DTR added with the interval below - So every 30s we will regenerate 0.1 dtr.
+  REGEN_DTR_INTERVAL: 30 # How long do we wait before adding dtr
+  REGEN_TIMER: 45 # Minutes
+  LOW_DTR: 0.25 # what is considered low dtr for the color below
+  DTR_FORMAT: '0.00' # 0.00 means all numbers will be shown 0.0# means if the last number is 0 it wont show
+  DTR_PER_MEMBER:
+    - '1.01' # 1
+    - '2.02' # 2
+    - '3.03' # 3
+    - '4.04' # 4
+    - '5.05' # 5
+    - '6.06' # 6
+    - '7.2' # 7
+    - '7.2' # 8
+    - '7.2' # 9
+    - '7.2' # 10
+  DTR_LOSS:
+    NORMAL: 1.0
+    END: 1.0
+    NETHER: 1.0
+    EVENTS: 1.0
+    CITADEL: 0.75
+  COLOR:
+    RAIDABLE: '&4'
+    LOW_DTR: '&e'
+    NORMAL: '&a'
+  SYMBOL:
+    FREEZE: '&c■'
+    REGENERATING: '&a▲'
+    NORMAL: '&a◀'
+
+RELATION_COLOR:
+  TEAMMATE: '&2'
+  ALLIED: '&9'
+  ENEMY: '&c'
+  FOCUSED: '&d'
+  ARCHER_TAG: '&e'
+  PVP_TIMER: '&6'
+  INVINCIBILITY: '&6'
+  KING: '&4'
+  SOTW: '&6'
+  STAFF: '&b'
+  STAFF_PREFIX: ''
+  KING_PREFIX: '&4[K] '
+
+FALLTRAP_CONFIG:
+  TASK_DELAY: 3
+  Y_LEVEL: 1
+  AMOUNT_PER_TICK: 5 # Used to speed up, don't make it too high
+  PARTICLE: 'NOTE'
+  PARTICLE_AMOUNT: 1
+  SOUND: 'NOTE_BASS_DRUM'
+  ACTION_BAR_COOLDOWN:
+    BARS_AMOUNT: 20
+    SYMBOL: '▋'
+    NON_COMPLETE_COLOR: '&c'
+    COMPLETE_COLOR: '&a'
+    ACTION_BAR: '&dFalltrap Progress&7: &r%actionbar% &9(%percent%%)'
+  FALLTRAP_MENU:
+    TITLE: '&dFalltrap Wall'
+    SIZE: 9
+    FALLTRAP_WALLS: # Material, Data, Display name in menu
+      - 'CRAFTING_TABLE, 0, &eClick to select &6Crafting Table &ewalls.'
+      - 'STONE_BRICK, 0, &eClick to select &7Stone Brick &ewalls.'
+      - 'NONE, 0, &eClick to select &fNone &ewalls.'
+  FALLTRAP_WAND:
+    NAME: '&a&oFalltrap Wand'
+    TYPE: 'WOOD_HOE'
+    LORE:
+      - '&eRight/Left Click &6Block'
+      - '&b- &fSelect claim''s corners'
+      - ''
+      - '&eRight Click &6Air'
+      - '&b- &fCancel current claim'
+      - ''
+      - '&9Crouch &eLeft Click &6Block/Air'
+      - '&b- &fPurchase current claim'
+
+BASE_CONFIG:
+  TASK_DELAY: 1
+  SET_FLOOR_TO_OUTLINE: true
+  PARTICLE: 'NOTE'
+  PARTICLE_AMOUNT: 1
+  SOUND: 'NOTE_BASS_DRUM'
+  ACTION_BAR_COOLDOWN:
+    BARS_AMOUNT: 20
+    SYMBOL: '▋'
+    NON_COMPLETE_COLOR: '&c'
+    COMPLETE_COLOR: '&a'
+    ACTION_BAR: '&dBase Progress&7: &r%actionbar% &9(%percent%%)'
+  BASE_WALL_MENU:
+    TITLE: '&dBase Wall'
+    SIZE: 9
+    BASE_WALLS: # Material, Data, Display name in menu
+      - 'STAINED_GLASS, 14, &eClick to select &4Red Glass &ewalls.'
+      - 'STAINED_GLASS, 10, &eClick to select &5Purple Glass &ewalls.'
+      - 'STAINED_GLASS, 1, &eClick to select &6Orange Glass &ewalls'
+  BASE_HEIGHT_MENU:
+    TITLE: '&dBase Height'
+    SIZE: 9
+    BASE_HEIGHTS: # Material, Data, Amount, Height, Display name in menu
+      - 'LADDER, 9, 9, 9, &eHeight: &c9 Blocks'
+      - 'LADDER, 8, 8, 8, &eHeight: &c8 Blocks'
+      - 'LADDER, 7, 7, 7, &eHeight: &c7 Blocks'
+      - 'LADDER, 6, 6, 6, &eHeight: &c6 Blocks'
+      - 'LADDER, 5, 5, 5, &eHeight: &c5 Blocks'
+      - 'LADDER, 4, 4, 4, &eHeight: &c4 Blocks'
+      - 'LADDER, 3, 3, 2, &eHeight: &c3 Blocks'
+      - 'LADDER, 2, 2, 3, &eHeight: &c2 Blocks'
+  BASE_OUTLINE_MENU:
+    TITLE: '&dBase Outline'
+    SIZE: 9
+    BASE_OUTLINES: # Material, Data, Display name in menu
+      - 'STONE_BRICK, 0, &eClick to select &7Stone Brick &eoutline.'
+      - 'WOOD, 0, &eClick to select &6Wood &eoutline.'
+      - 'WOOL, 14, &eClick to select &4Red Wool &eoutline'
+  BASE_WAND:
+    NAME: '&a&oBase Wand'
+    TYPE: 'WOOD_HOE'
+    LORE:
+      - '&eRight/Left Click &6Block'
+      - '&b- &fSelect claim''s corners'
+      - ''
+      - '&eRight Click &6Air'
+      - '&b- &fCancel current claim'
+      - ''
+      - '&9Crouch &eLeft Click &6Block/Air'
+      - '&b- &fPurchase current claim'
+
+CLAIMING:
+  MIN_SIZE: 5
+  MAX_SIZE: 40
+  CLAIM_SEPARATOR: 2 # Amount of blocks claims have to be apart from
+  PRICE_PER_BLOCK: 0.25
+  SELL_MULTIPLIER: 0.8
+  MULTIPLIER_AREA: 250 # Amount of blocks a claim needs before it's multiplied
+  MULTIPLIER_CLAIM: 500 # Amount of claims times this will be added onto the price
+  CLAIM_WAND:
+    NAME: '&a&oClaiming Wand'
+    TYPE: 'WOOD_HOE'
+    LORE:
+      - '&eRight/Left Click &6Block'
+      - '&b- &fSelect claim''s corners'
+      - ''
+      - '&eRight Click &6Air'
+      - '&b- &fCancel current claim'
+      - ''
+      - '&9Crouch &eLeft Click &6Block/Air'
+      - '&b- &fPurchase current claim'

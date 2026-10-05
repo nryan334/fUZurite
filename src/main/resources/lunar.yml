@@ -1,0 +1,93 @@
+LUNAR_API:
+  FIX_1_8_HIT_DELAY: true # Viper does this aswell, it fixes the hit delay for lunar client only!
+
+TEAM_VIEWER:
+  ENABLED: true
+  SHOW_DISPLAY_NAME: true
+  COLOR: '#ADD8E6'
+  PER_CLASS_COLOR:
+    ENABLED: true
+    ARCHER: '#00FF00'
+    BARD: '#FFFF00'
+    ROGUE: '#808080'
+    GHOST: '#FFFFFF'
+    MAGE: '#013220'
+    MINER: '#000000'
+
+NAMETAGS:
+  NORMAL: '&6[%name% %dtr-color%%dtr%%dtr-symbol%&6]'
+  TEAM_TOP: '&6[%pos% %pos-color%%name% %dtr-color%%dtr%%dtr-symbol%&6]'
+  VANISHED_SYMBOL: '&b*'
+  FORMAT: # You can use %rank-name% and %rank-color% aswell
+    MOD_MODE:
+      - '&3[Mod Mode]'
+      - '%vanishsymbol%%name%'
+    IN_TEAM:
+      - '%teamtag%'
+      - '%killtag%%vanishsymbol%%name%'
+    NO_TEAM:
+      - '%killtag%%vanishsymbol%%name%'
+
+LUNAR_PREFIXES:
+  ENABLED: true
+  TEAMS:
+    ONE:
+      PREFIX: '&4①'
+      COLOR: '&4'
+    TWO:
+      PREFIX: '&c②'
+      COLOR: '&c'
+    THREE:
+      PREFIX: '&f③'
+      COLOR: '&f'
+  PLAYER:
+    ONE: '&6#1 '
+    TWO: '&2#2 '
+    THREE: '&7#3 '
+
+# Just google '<color> hex code'
+WAYPOINTS:
+  SPAWN:
+    ENABLED: true
+    NAME: 'Spawn'
+    COLOR: '#00FF00'
+  END_SPAWN:
+    ENABLED: true
+    NAME: 'End Spawn'
+    COLOR: '#800080'
+  NETHER_SPAWN:
+    ENABLED: true
+    NAME: 'Nether Spawn'
+    COLOR: '#ff0000'
+  HQ:
+    ENABLED: true
+    NAME: 'HQ'
+    COLOR: '#0000FF'
+  FOCUS:
+    ENABLED: true
+    NAME: '%team%''s HQ'
+    COLOR: '#FFC0CB'
+  RALLY_POINT:
+    ENABLED: true
+    NAME: 'Rally Point'
+    COLOR: '#FF0000'
+  GLOWSTONE:
+    ENABLED: true
+    NAME: 'Glowstone Mountain'
+    COLOR: '#FFD700'
+  ORE_MOUNTAIN:
+    ENABLED: true
+    NAME: 'Ore Mountain'
+    COLOR: '#00FFFF'
+  KOTH:
+    ENABLED: true
+    NAME: '%name% KoTH'
+    COLOR: '#0000FF'
+  END_EXIT: # This is in the end world.
+    ENABLED: true
+    NAME: 'End Exit'
+    COLOR: '#9400D3'
+  CONQUEST:
+    ENABLED: true
+    NAME: '%name% Zone'
+    COLOR: '%color%'

@@ -1,0 +1,1003 @@
+# Join support for a license if you don't already have one
+LICENSE_KEY: ''
+
+#JSON or MONGO
+STORAGE_TYPE: 'JSON'
+
+# Enable Mongo above to use this
+MONGO:
+  URI: '' # URI will be used if it is not empty.
+  SERVER_IP: '127.0.0.1:27017'
+  DATABASE: 'Azurite'
+  AUTH:
+    ENABLED: false
+    USERNAME: 'admin'
+    PASSWORD: 'Password'
+
+PAGINATED_MENUS:
+  FILLER:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 7
+    LORE: { }
+  NEXT_PAGE:
+    NAME: '&cNext Page'
+    SOUND: 'CLICK'
+    MATERIAL: 'CARPET'
+    DATA: 7
+    LORE: { }
+  LAST_PAGE:
+    NAME: '&cPrevious Page'
+    SOUND: 'CLICK'
+    MATERIAL: 'CARPET'
+    DATA: 7
+    LORE: { }
+
+KITMAP_MODE: false # Is the server kits mode
+KITS_INFO_ONLY_SPAWN: true # Should the info on scoreboard only show in spawn
+TEAM_INFO_JOIN: true # Send team info on join
+SMELT_ON_MINE: true # Smelt block on mine
+GIVE_EXP_MINE: true # Give exp straight to player on mine
+WATER_MOVE_CLAIMS: true # Allow water/lava to flow into player claims
+GIVE_EXP_KILL: true # This is NOT for players, only mobs. Give exp instantly.
+GIVE_ITEM_ON_KILL: true # This is NOT for players, only mobs. Give drops instantly
+GIVE_BLOCK_ON_MINE: true # Give the block straight to the players inventory?
+DEFAULT_CLAIM_SCOREBOARD: false # What is the default for claim on scoreboard? (/settings)
+DEFAULT_DEATH_MESSAGES: true # What is the default for death messages? (/settings)
+MOB_NATURAL_SPAWN: false # Do you want mobs to naturally spawn?
+MOB_SPAWN_WARZONE: false # Do you want mobs to spawn in warzone
+MESSAGE_SOUND: 'ORB_PICKUP' # Sound from /message
+HIDE_VANISH_FROM_MESSAGE: true # Hide vanished players from being able to be /messaged
+DISABLE_BEDS: true # Deny the placement of beds
+ALLOW_ORE_MINE_SPAWN: false # Allow the mining of ores in spawn
+ALLOW_BOW_BOOSTING: true # Allow bow boosting
+DENY_ENDERPEARL_TO_SPAWN: true # Deny teleporting into spawn from the outside
+DENY_ENDERPEARL_IN_SPAWN: false # Deny using an enderpearl while in spawn
+MILK_ONLY_REMOVE_NEGATIVE: true # Only remove negative effects when drinking milk
+DISABLE_ENDER_EYE: true # Disable the throwing of ender eyes
+ENDERMEN_HOSTILE: true # Should endermen target players
+
+DEATHBANS:
+  DEFAULT_TIME: 45
+  KILL_TIME: 5 # how much time to take when a deathbanned player gets a kill.
+  TIMES: # It will use the lowest if the player has permission.
+    - 'GOLD, 35' # azurite.deathban.gold
+    - 'SILVER, 30' # azurite.deathban.silver
+    - 'AZURITE, 20' # azurite.deathban.azurite
+  SIGNS_CONFIG:
+    LIVES_SIGN: # create a sign with line 0 as [lives]
+      - '&0&m----------'
+      - 'Have lives?'
+      - '&aClick me!'
+      - '&0&m----------'
+    KILLED_BY: # create a sign with line 0 as [killedbysign]
+      - '&0&m----------'
+      - 'Killed By:'
+      - '&d%reason%'
+      - '&0&m----------'
+    DEATH_LOCATION: # create a sign with line 0 as [deathlocsign]
+      - '&0&m----------'
+      - 'Death Location:'
+      - '&c%location%'
+      - '&0&m----------'
+
+COBWEBS_CONFIG:
+  PLACE_WARZONE: true
+  PLACE_ROAD: true
+  PLACE_WILDERNESS: true
+  DESPAWN_TIME: 8
+
+DURABILITY_FIX:
+  ENABLED: true
+  PERCENT: 75 # Chance to ignore durability damage
+
+JOIN_ITEMS:
+  ENABLED: true
+  BOOK_ITEM:
+    ENABLED: true
+    TITLE: '&6Welcome to Azurite'
+    AUTHOR: 'Keqno'
+    PAGES:
+      - '&9Welcome to the Azurite Network.'
+  NORMAL_ITEMS: # MATERIAL, AMOUNT, ENCHANTS
+    - 'FISHING_ROD, 1, LURE:2'
+    - 'COOKED_BEEF, 10, NONE'
+
+PLAYER_TITLES:
+  WELCOME_BACK:
+    ENABLED: true
+    TITLE: '&d&lHCF'
+    SUBTITLE: 'Welcome back to HCF!'
+  JOIN_NO_TEAM:
+    ENABLED: true
+    TITLE: '&d&lGet Started'
+    SUBTITLE: 'Create a faction using /team create <name>'
+  JOIN_NO_CLAIMS:
+    ENABLED: true
+    TITLE: '&d&lGet Started'
+    SUBTITLE: 'Use /team claim to start the claiming process'
+  TEAM_CREATE:
+    ENABLED: true
+    TITLE: '&d&lTeam Created'
+    SUBTITLE: 'Use /team to find out more information.'
+  STAFF_ENABLED:
+    ENABLED: true
+    TITLE: '&d&lStaff Mode'
+    SUBTITLE: '&aEnabled'
+  STAFF_DISABLED:
+    ENABLED: true
+    TITLE: '&d&lStaff Mode'
+    SUBTITLE: '&cDisabled'
+
+MOTD_MESSAGE:
+  ENABLED: true
+  MOTD:
+    - '&7&m----------------------'
+    - '&d&lAzurite Network'
+    - ''
+    - '&9Discord&7: &fdiscord.azurite.cc'
+    - '&4Team Speak&7: &fteamspeak.azurite.cc'
+    - '&bTwitter&7: &ftwitter.azurite.cc'
+    - ''
+    - '&7Welcome to the Azurite Network &d%player%&7!'
+    - '&7&m----------------------'
+
+JOIN_COMMANDS:
+  ENABLED: true
+  COMMANDS:
+    - 'cr givekey %player% azurite 10'
+
+KILL_COMMANDS:
+  ENABLED: true
+  COMMANDS:
+    - 'cr givekey %player% kill 1'
+
+DEATH_COMMANDS:
+  ENABLED: true
+  COMMANDS:
+    - 'cr givekey %player% death 1'
+
+LIMIT_ENTRY_PER_TEAM:
+  EVENTS: 0 # 0 to allow any amount of members to enter event teams
+  CITADEL: 3 # Minimum of 3 members allowed to enter citadel teams
+  CONQUEST: 3 # Minimum of 3 members allowed to enter citadel teams
+
+SAVE_DATA_TASK:
+  ENABLED: true
+  TIME: 300
+  COMMANDS:
+    - 'azurite forcesave'
+
+MOB_STACKING:
+  ENABLED: true
+  RADIUS: 10
+  MAX_STACK: 150
+  DESPAWN_TIME: 300 # 0 to disable despawn time
+  COLOR: '&c'
+  DENIED_ENTITIES:
+    - 'VILLAGER'
+    - 'ENDERMAN'
+
+DISCORD_WEBHOOK:
+  ENABLED: true
+  REQUEST_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: '' # Shows out of embed
+    DESCRIPTION: '**%player%** needs assistance with **%request%**' # Shows in embed
+    COLOR: '#FF69B4' # Embed color
+    FOOTER: 'Requests info for azurite.cc' # Footer of embed
+    FOOTER_ICON: 'https://img.icons8.com/fluency/2x/document.png' # Footer icon of embed
+    THUMBNAIL: 'https://img.icons8.com/fluency/2x/support.png' # Icon on the right of embed
+    AUTHOR: 'Azurite Network Requests' # Author of embed
+    AUTHOR_URL: 'https://google.com' # When clicking author
+    AUTHOR_ICON: 'https://img.icons8.com/fluency/2x/checked.png' # Author icon
+  REPORT_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: '' # Shows out of embed
+    DESCRIPTION: '**%player%** has reported **%target%** for **%report%**' # Shows in embed
+    COLOR: '#90C1D7' # Embed color
+    FOOTER: 'Reports info for azurite.cc' # Footer of embed
+    FOOTER_ICON: 'https://img.icons8.com/fluency/2x/document.png' # Footer icon of embed
+    THUMBNAIL: 'https://img.icons8.com/fluency/2x/support.png' # Icon on the right of embed
+    AUTHOR: 'Azurite Network Reports' # Author of embed
+    AUTHOR_URL: 'https://google.com' # When clicking author
+    AUTHOR_ICON: 'https://img.icons8.com/fluency/2x/checked.png' # Author icon
+  KOTH_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: '' # Shows out of embed
+    DESCRIPTION: '**%koth%** KoTH is now active! [%time%]' # Shows in embed
+    COLOR: '#FF0000' # Embed color
+    FOOTER: 'KoTH info for azurite.cc' # Footer of embed
+    FOOTER_ICON: 'https://img.icons8.com/external-kmg-design-flat-kmg-design/2x/external-sword-active-lifestyle-kmg-design-flat-kmg-design.png' # Footer icon of embed
+    THUMBNAIL: 'https://img.icons8.com/color/2x/fairytale.png' # Icon on the right of embed
+    AUTHOR: 'Azurite Network KoTH' # Author of embed
+    AUTHOR_URL: 'https://google.com' # When clicking author
+    AUTHOR_ICON: 'https://img.icons8.com/fluency/2x/checked.png' # Author icon
+  RESTORE_WEBHOOK:
+    WEBHOOK_URL: ''
+    CONTENT: '' # Shows out of embed
+    DESCRIPTION: '%player% has restored the inventory for %target% dated %date%' # Shows in embed
+    COLOR: '#FF0000' # Embed color
+    FOOTER: 'Restores info for azurite.cc' # Footer of embed
+    FOOTER_ICON: 'https://img.icons8.com/external-kmg-design-flat-kmg-design/2x/external-sword-active-lifestyle-kmg-design-flat-kmg-design.png' # Footer icon of embed
+    THUMBNAIL: 'https://img.icons8.com/color/2x/fairytale.png' # Icon on the right of embed
+    AUTHOR: 'Azurite Restores' # Author of embed
+    AUTHOR_URL: 'https://google.com' # When clicking author
+    AUTHOR_ICON: 'https://img.icons8.com/fluency/2x/checked.png' # Author icon
+
+STRENGTH_FIX:
+  ENABLED: true
+  MULTIPLIER_LEVEL_1: 0.45
+  MULTIPLIER_LEVEL_2: 0.40
+  MULTIPLIER_LEVEL_3+: 0.30
+
+KILL_TAGS:
+  TITLE: '&dKilltags'
+  SIZE: 27
+  EQUIPPED_PLACEHOLDER: '&aYou have this killtag equipped.'
+  RESET_BUTTON:
+    SLOT: 5
+    NAME: '&cReset Killtag'
+    MATERIAL: 'REDSTONE'
+    SOUND: 'ITEM_BREAK'
+    LORE:
+      - '&aCurrent: &r%current%'
+  TYPES: # Add as many as u want below here
+    POOPED: # perm is azurite.killtag.pooped
+      NAME: '&dPooped On'
+      MATERIAL: 'NAME_TAG'
+      FORMAT: '%killer% &etook a poop on %player% &eusing &c%item%&e.'
+      SLOT: 1
+      LORE:
+        - '&eRight click to select &dPooped On&e.'
+        - '&cAzurite&4[0] &etook a poop on &cMeeZoid&4[0]'
+        - '%equipped%'
+    BEAMED: # perm is azurite.killtag.beamed
+      NAME: '&dBeamed'
+      MATERIAL: 'NAME_TAG'
+      FORMAT: '%killer% &ewas beamed by %player% &eusing &c%item%&e.'
+      SLOT: 2
+      LORE:
+        - '&eRight click to select &dBeamed&e.'
+        - '&cAzurite&4[0] &ebeamed &cMeeZoid&4[0]'
+        - '%equipped%'
+    SMACKED: # perm is azurite.killtag.smacked
+      NAME: '&dSmacked'
+      MATERIAL: 'NAME_TAG'
+      FORMAT: '%killer% &esmacked %player% &eusing &c%item%&e.'
+      SLOT: 3
+      LORE:
+        - '&eRight click to select &dSmacked&e.'
+        - '&cAzurite&4[0] &esmacked &cMeeZoid&4[0]'
+        - '%equipped%'
+    PISSED: # perm is azurite.killtag.pissed
+      NAME: '&dPissed'
+      MATERIAL: 'NAME_TAG'
+      FORMAT: '%killer% &epissed on %player% &eusing &c%item%&e.'
+      SLOT: 4
+      LORE:
+        - '&eRight click to select &dPissed&e.'
+        - '&cAzurite&4[0] &epissed on &cMeeZoid&4[0]'
+        - '%equipped%'
+    SHIT_ON: # perm is azurite.killtag.shit_on
+      NAME: '&dShit On'
+      MATERIAL: 'NAME_TAG'
+      FORMAT: '%killer% &etook a shit on %player% &eusing &c%item%&e.'
+      SLOT: 5
+      LORE:
+        - '&eRight click to select &dShit on&e.'
+        - '&cAzurite&4[0] &etook a shit on &cMeeZoid&4[0]'
+        - '%equipped%'
+
+HOLOGRAM_PLACEHOLDER:
+  NONE: '&7%number%. &fN/A'
+  FTOP: '&7%number%. &d%team% &f(%points% points)'
+  FTOP_RAIDABLE: '&7%number%. &d%team% &f(%raidablepoints% raidable)'
+  KILLS_TOP: '&7%number%. &d%player% &f(%kills% kills)'
+  DEATHS_TOP: '&7%number%. &d%player% &f(%deaths% deaths)'
+  KDR_TOP: '&7%number%. &d%player% &f(%kdr% KDR)'
+  KILLSTREAK_TOP: '&7%number%. &d%player% &f(%killstreak% killstreak)'
+
+GOLDEN_APPLE_LIMIT:
+  NORMAL: -1 # -1 unchanged
+  NETHER: 16
+  THE_END: 16
+
+CONQUEST:
+  SECONDS_PER_CAPZONE: 30 # How long does it take to cap each zone
+  POINTS_CAPTURE: 150 # How many points to win conquest
+  POINTS_DEATH: 5 # How many points to take when a player dies
+  TEAM_POINTS_WON: 100 # How many points is awarded after capturing conquest
+  SCOREBOARD_ONLY_CONQUEST_CLAIM: false # Only show conquest scoreboard in claim
+  COMMANDS_WON:
+    - 'cr givekey %player% event 3'
+    - 'cr givekey %player% conquest 5'
+
+STAFF_MODE:
+  STAFF_MODE_ON_JOIN: true # Enable staff on join
+  LUNAR_STAFF_MODULES: true # Enable lunar staff modules
+  ACTION_BAR_ENABLED: true
+  ACTION_BAR_STRING: '&6Vanish: %vanished% &7┃ &6Build: %staffbuild% &7┃ &6Hide Staff: %hidestaff%'
+  SILENT_VIEW_TITLE: 'Silently viewing...' # When clicking a chest or hopper in staff mode.
+  FREEZE_MESSAGE_INTERVAL: 3
+  RANDOM_TP_MINER_Y: 25 # For random tp miner player has to be below this y level
+  PAUSE_PLAYTIME_STAFF: true
+  PLACEHOLDERS:
+    TRUE_PLACEHOLDER: '&a✔'
+    FALSE_PLACEHOLDER: '&c×'
+  DISABLED_COMMANDS_FROZEN:
+    - 'f home'
+    - 't home'
+    - 'faction home'
+    - 'team home'
+    - 'logout'
+  REPORTS_MENU:
+    TITLE: '&dReports'
+    SIZE: 27
+    MAX_REPORTS: 81
+    REPORT_FORMAT:
+      NAME: '&dReport: &e%reported%'
+      MATERIAL: 'PAPER'
+      COMMAND: '/teleport %reported%'
+      DATA: 0
+      LORE:
+        - '&7&m----------------------------'
+        - '&ePlayer: &c%player%'
+        - '&eReported: &c%reported%'
+        - '&eReason: &c%reason%'
+        - ''
+        - '&eClick to teleport to &d%reported%&e.'
+        - '&7&m----------------------------'
+  REQUESTS_MENU:
+    TITLE: '&dRequests'
+    SIZE: 27
+    MAX_REPORTS: 81
+    REQUEST_FORMAT:
+      NAME: '&dRequest: &e%player%'
+      MATERIAL: 'PAPER'
+      COMMAND: '/teleport %player%'
+      DATA: 0
+      LORE:
+        - '&7&m----------------------------'
+        - '&ePlayer: &c%player%'
+        - '&eRequest: &c%reason%'
+        - ''
+        - '&eClick to teleport to &d%player%&e.'
+        - '&7&m----------------------------'
+  STAFF_ITEMS:
+    VANISH_ON:
+      NAME: '&3Vanish &c(Disabled)'
+      ACTION: 'VANISH_ON' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'INK_SACK'
+      DATA: 8
+      SLOT: 1
+      REPLACE: 'VANISH_OFF' # When clicked, which item should replace this one.
+      COMMAND: ''
+      LORE:
+        - '&eClick to appear to all online players. '
+    VANISH_OFF:
+      NAME: '&3Vanish &a(Enabled)'
+      ACTION: 'VANISH_OFF' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'INK_SACK'
+      DATA: 10
+      SLOT: 1
+      REPLACE: 'VANISH_ON' # When clicked, which item should replace this one.
+      COMMAND: ''
+      LORE:
+        - '&eClick to vanish from all online players.'
+    FREEZE:
+      NAME: '&bFreeze'
+      ACTION: 'FREEZE' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'ICE'
+      DATA: 0
+      SLOT: 2
+      REPLACE: '' # When clicked, which item should replace this one.
+      COMMAND: ''
+      LORE:
+        - '&eClick a player to freeze them.'
+    RANDOM_TP:
+      NAME: '&6Random Teleport'
+      ACTION: '' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'FEATHER'
+      DATA: 0
+      SLOT: 8
+      REPLACE: '' # When clicked, which item should replace this one.
+      COMMAND: '/randomtp'
+      LORE:
+        - '&eClick to randomly teleport to a online player.'
+    RANDOM_TP_COMBAT:
+      NAME: '&4Teleport Combat'
+      ACTION: 'COMBAT_TP' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'BLAZE_ROD'
+      DATA: 0
+      SLOT: 6
+      REPLACE: '' # When clicked, which item should replace this one.
+      COMMAND: ''
+      LORE:
+        - '&eClick to randomly teleport to players in combat.'
+    INSPECTION:
+      NAME: '&dInventory Inspect'
+      ACTION: 'INSPECTION' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'BOOK'
+      DATA: 0
+      SLOT: 9
+      REPLACE: '' # When clicked, which item should replace this one.
+      COMMAND: ''
+      LORE:
+        - '&eClick a player to inspect their inventory.'
+    COMPASS:
+      NAME: '&cWall Teleport'
+      ACTION: '' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'COMPASS'
+      DATA: 0
+      SLOT: 5
+      REPLACE: '' # When clicked, which item should replace this one.
+      COMMAND: ''
+      LORE:
+        - '&eClick a wall to teleport through it.'
+    CARPET:
+      NAME: '&5Online Staff'
+      ACTION: '' # Can be: VANISH_OFF, VANISH_ON, INSPECTION, FREEZE, INTERACT_PLAYER, COMBAT_TP
+      MATERIAL: 'SKULL_ITEM'
+      DATA: 0
+      SLOT: 4
+      REPLACE: '' # When clicked, which item should replace this one.
+      COMMAND: '/staffonline'
+      LORE:
+        - '&eClick to view online staff.'
+  INSPECTION_MENU:
+    TITLE: '&dInspection Menu'
+    SIZE: 54
+    FILLER:
+      NAME: '&7'
+      MATERIAL: STAINED_GLASS_PANE
+      DATA: 3
+    POTIONS_VIEWER:
+      NAME: '&dActive Effects'
+      MATERIAL: BREWING_STAND_ITEM
+      DATA: 0
+      SLOT: 50
+      FORMAT: '&e%effect% &7(&d%time% &dLVL: %amplifier%&7)'
+    PLAYER_INFO:
+      NAME: '&ePlayer Info&7: &d%player%'
+      MATERIAL: 'SKULL_ITEM'
+      DATA: 0
+      SLOT: 51
+      LORE:
+        - '&dKills&7: &f%kills%'
+        - '&dDeaths&7: &f%deaths%'
+        - '&dLives&7: &f%lives%'
+    CLOSE_INSPECTION:
+      NAME: '&cClose Inspection'
+      MATERIAL: 'WOOL'
+      DATA: 14
+      SLOT: 54
+      LORE:
+        - '&eClick to close inspection.'
+    HELMET_SLOT: 46
+    CHESTPLATE_SLOT: 47
+    LEGGINGS_SLOT: 48
+    BOOTS_SLOT: 49
+  STAFF_ONLINE_MENU:
+    TITLE: '&dOnline Staff'
+    SIZE: 27
+    STAFF_HEAD:
+      NAME: '%rank-prefix%&d%color%%player%'
+      MATERIAL: 'SKULL_ITEM'
+      DATA: 3
+      COMMAND: '/teleport %player%'
+      LORE:
+        - '&ePlaytime: &d%playtime%'
+        - ''
+        - '&eStaff Mode: %staff%'
+        - '&eVanished: %vanish%'
+        - ''
+        - '&3Click to teleport to &b%player%&e.'
+
+SPAWNERS_CONFIG:
+  ITEM:
+    NAME: '&dMob Spawner'
+    LORE:
+      - '&eEntity Type: &c%spawner%'
+  TYPES: # Entity Type, Display name
+    - 'ENDERMAN, &5Endermen'
+    - 'BLAZE, &6Blaze'
+    - 'CREEPER, &aCreeper'
+    - 'SPIDER, &8Spider'
+    - 'COW, &7Cow'
+    - 'PIG, &dPig'
+    - 'SKELETON, &7Skeleton'
+    - 'CAVE_SPIDER, &cCave Spider'
+    - 'ZOMBIE, &2Zombie Spawner'
+
+BLOCKSHOP_CONFIG:
+  ONLY_SOTW: false
+  ALLOW_OWN_TEAM: true
+  ALLOW_ENEMY_TEAM: false
+  ALLOW_WARZONE: false
+  ALLOW_WILDERNESS: false
+  ALLOW_COMBAT: false
+
+STARTING_BALANCES:
+  DEFAULT_MEMBER: 500
+  PER_RANK:
+    IRON: '2, 600' # azurite.balance.iron
+    GOLD: '3, 700' # azurite.balance.gold
+    AZURITE: '4, 800' # azurite.balance.azurite
+
+CROWBARS:
+  NAME: '&dCrowbar'
+  MATERIAL: 'GOLD_HOE'
+  SPAWNER_LINE: '&eSpawner: &c%spawner%'
+  END_FRAME_LINE: '&eEnd Frame: &c%endframe%'
+  SPAWNER_AMOUNT: 5
+  END_FRAME_AMOUNT: 5
+
+REDEEMS: # Make a command percent 0 to always run it.
+  KEANO:
+    NAME: 'Keano'
+    COMMANDS: # Command, Chance of running command
+      - 'cr givekey %player% keano 5, 100%'
+      - 'cr give partnerpackage %player% 1, 100%'
+      - 'lootbox give %player% 1, 100%'
+  PEQRLZ:
+    NAME: 'Peqrlz'
+    COMMANDS: # Command, Chance of running command
+      - 'cr givekey %player% keano 5, 3%'
+      - 'cr give partnerpackage %player% 1, 5%'
+      - 'lootbox give %player% 1, 1%'
+  ANDREW:
+    NAME: 'Andrew'
+    COMMANDS: # Command, Chance of running command
+      - 'cr givekey %player% keano 5, 3%'
+      - 'cr give partnerpackage %player% 1, 5%'
+      - 'lootbox give %player% 1, 1%'
+
+# Should the player be banned from using the portal after dying
+DEATH_PORTAL_BAN:
+  NETHER: 3 # 3 Minutes, -1 = No change
+  END: 3 # 3 Minutes, -1 = No change
+
+# If you don't want multicolor just set all the same
+WALLS:
+  LUNAR_WALLS_ENABLED: true
+  PVP_TIMER:
+    TYPE: 'STAINED_GLASS'
+    COLOR_LUNAR: '#32CD32'
+    DATA: 5
+  INVINCIBILITY:
+    TYPE: 'STAINED_GLASS'
+    COLOR_LUNAR: '#32CD32'
+    DATA: 5
+  COMBAT_TAG:
+    TYPE: 'STAINED_GLASS'
+    COLOR_LUNAR: '#FF0000'
+    DATA: 14
+  LOCKED_CLAIM:
+    TYPE: 'STAINED_GLASS'
+    COLOR_LUNAR: '#ADD8E6'
+    DATA: 3
+  EVENT_DENIED:
+    TYPE: 'STAINED_GLASS'
+    COLOR_LUNAR: '#0000FF'
+    DATA: 11
+  CITADEL_DENIED:
+    TYPE: 'STAINED_GLASS'
+    COLOR_LUNAR: '#A020F0'
+    DATA: 10
+  CONQUEST_DENIED:
+    TYPE: 'STAINED_GLASS'
+    COLOR_LUNAR: '#FFA500'
+    DATA: 1
+
+STATS_TRACKER:
+  ENABLED: true
+  SPACE_BEFORE_KILLS: true
+  SPACE_BEFORE_DEATHS: true
+  KILLS_ONLY_SWORD: true
+  MAX_KILLS_STATS: 3 # -1 for no limit
+  MAX_DEATHS_STATS: 3 # -1 for no limit
+  KILLS_PLACEHOLDER: '&4&lKills: &f'
+  DEATHS_PLACEHOLDER: '&4&lDeaths:'
+  KILL_STAT: '&e%playerPrefix%%playerColor%%player% &fkilled &e%targetPrefix%%targetColor%%target%'
+  DEATH_STAT: '&e%target% &fkilled by &e%player% &6%date% %time%'
+
+KOTHS_CONFIG:
+  # Allow players without teams to cap
+  ALLOW_NO_TEAM_CAP: true
+  # When should we send the capturing message, currently every 20 seconds.
+  SEND_CAPTURING_MESSAGE: 20
+  # What percentage of koth should atleast be captured to send the lost control message
+  LOST_CONTROL_PERCENT: 70
+  # When should we tell the team they are controlling the koth, currently every 60 seconds.
+  TEAM_SEND_CAPTURING_MESSAGE: 60
+  # How many koths are able to run at once
+  MAX_KOTHS_ACTIVE: 1
+  # Commands to run when a player captures a koth
+  COMMANDS_ON_CAPTURE:
+    - 'cr givekey %player% event 3'
+    - 'cr givekey %player% koth 5'
+
+CITADEL:
+  CHEST_CONFIG:
+    # The amount of items per chest (Will be randomized)
+    MIN_ITEM_AMOUNT: 2
+    MAX_ITEM_AMOUNT: 5
+    RANDOM_ITEMS: # Material, Amount, Data, Name, Enchants, Lore, Percentage
+      - 'DIAMOND_SWORD, 1, 0, &5&lCitadel &d&lSword, DAMAGE_ALL:2;DURABILITY:4, &cNutrition III;&cKeano IX, 30%'
+      - 'DIAMOND_HELMET, 1, 0, &5&lCitadel &d&lHelmet, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, none, 20%'
+      - 'DIAMOND_CHESTPLATE, 1, 0, &5&lCitadel &4&lChestplate, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, &cFire Resistance I, 20%'
+      - 'DIAMOND_LEGGINGS, 1, 0, &5&lCitadel &4&lLeggings, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, none, 20%'
+      - 'DIAMOND_BOOTS, 1, 0, &5&lCitadel &4&lBoots, PROTECTION_ENVIRONMENTAL:2;DURABILITY:4, &cSpeed II, 15%'
+      - 'COOKIE, 1, 0, &5&lCitadel &d&lCookie, none, &5&kii&r &dKeano''s &dMagical &dCookie &5&kii&r, 10%'
+      - 'GOLDEN_APPLE, 16, 0, none, none, none, 45%'
+      - 'GOLDEN_APPLE, 1, 1, none, none, none, 10%'
+      - 'ENDER_PEARL, 8, 0, none, none, none, 30%'
+      - 'GLOWSTONE_DUST, 16, 0, none, none, none, 35%'
+      - 'SULPHUR, 16, 0, none, none, none, 35%' # gunpowder named sulphur
+      - 'EMERALD_BLOCK, 16, 0, none, none, none, 20%'
+      - 'DIAMOND_BLOCK, 16, 0, none, none, none, 25%'
+      - 'GOLD_BLOCK, 16, 0, none, none, none, 30%'
+      - 'IRON_BLOCK, 16, 0, none, none, none, 35%'
+      - 'ABILITY:Switcher, 4, 15%' # Abilities are like this. Ability, Amount, Chance
+      - 'ABILITY:AntiBuild, 4, 15%' # Abilities are like this. Ability, Amount, Chance
+
+MOUNTAINS:
+  EDIT_LOOT_MENU:
+    TITLE: '&dEditing Loot'
+    SIZE: 36
+    SOUND_CLICK: 'CLICK'
+    SOUND_REMOVE: 'ITEM_BREAK'
+    LORE:
+      - '%lore%'
+      - ''
+      - '&bChance: &f%chance%'
+      - '&bLeft click: &f+1% &bShift Left Click: &f+10%'
+      - '&bRight click: &f-1% &bShift Right Click: &f-10%'
+      - '&bMiddle click to remove item.'
+  ORE_MOUNTAIN:
+    # The amount of items per chest (Will be randomized)
+    MIN_ITEM_AMOUNT: 2
+    MAX_ITEM_AMOUNT: 5
+    ALLOWED_BREAK: # The items to respawn/allowed breaking.
+      - 'EMERALD_ORE'
+      - 'DIAMOND_ORE'
+      - 'GOLD_ORE'
+      - 'IRON_ORE'
+      - 'COAL_ORE'
+      - 'EMERALD_BLOCK'
+      - 'DIAMOND_BLOCK'
+      - 'GOLD_BLOCK'
+      - 'IRON_BLOCK'
+      - 'COAL_BLOCK'
+  GLOWSTONE:
+    # The amount of items per chest (Will be randomized)
+    MIN_ITEM_AMOUNT: 0
+    MAX_ITEM_AMOUNT: 0
+    ALLOWED_BREAK: # The items to respawn/allowed breaking.
+      - 'GLOWSTONE'
+
+BORDERS:
+  world: 2000
+  world_nether: 1000
+  world_the_end: 1000
+
+INVENTORY_RESTORE:
+  RESTORES_LIMIT: 9 # Highly suggest lowering this as saving 9 inventories isn't ideal.
+  RESTORE_MENU:
+    TITLE: '&dRestore: &e%player%'
+    SIZE: 18
+    NAME: '&dInventory Restore: &c%date%'
+    RESTORE_ITEM: 'PAPER'
+    FORMAT:
+      - '&7&m----------------------------'
+      - '&eArmor Content: &c%armoramount%'
+      - '&eContent: &c%contentamount%'
+      - '&eDate: &c%date%'
+      - ''
+      - '&aClick to preview inventory.'
+      - '&7&m----------------------------'
+  INVENTORY_MENU:
+    TITLE: '&c%date%'
+    SIZE: 54
+    CONFIRM_RESTORE:
+      NAME: '&aConfirm Button'
+      MATERIAL: 'WOOL'
+      DATA: 5
+      SLOT: 54
+      LORE: { }
+    BACK_BUTTON:
+      NAME: '&cBack Button'
+      MATERIAL: 'WOOL'
+      DATA: 14
+      SLOT: 53
+      LORE: { }
+    FILLER:
+      NAME: '&7'
+      MATERIAL: STAINED_GLASS_PANE
+      DATA: 3
+    HELMET_SLOT: 46
+    CHESTPLATE_SLOT: 47
+    LEGGINGS_SLOT: 48
+    BOOTS_SLOT: 49
+
+LOGGERS:
+  COLOR: '&e'
+  DESPAWN: 15 # Seconds
+
+ONLINE_DONOR:
+  INTERVAL: 120 # Seconds
+  SOUND: '' # Empty to disable
+  MESSAGE: # Permission: azurite.donor - Won't count opped players.
+    - '&7&m--------------------------'
+    - '&d&lAzurite Donors&7: &f%members%'
+    - '&ePurchase &dAzurite Rank &eat store.azurite.cc'
+    - '&7&m--------------------------'
+
+CHAT_FORMAT:
+  DENIED_WORDS:
+    - 'FUCK'
+    - 'BITCH'
+    - 'KYS'
+    - 'STFU'
+  COOLDOWN: 3 # seconds
+  PUBLIC_NO_TEAM: '%killtop%%tag%%prefix%%color%%player%%suffix%&7: &f%s'
+  PUBLIC_TEAM: '&6[%ftop%%ftop-color%%team%&6]&r %killtop%%tag%%prefix%%color%%player%%suffix%&7: &f%s'
+  KILL_TOP_FORMAT: '&8[%killtop%&8] &r'
+  FTOP_FORMAT: '%ftop% '
+  STAFF:
+    FORMAT: '&d(Staff) %player%: &e%s'
+  TEAM_CHAT:
+    ENABLED: true
+    FORMAT: '&2(Team) %player%: &e%s'
+    SHORTCUT: '@' # Type @ before a message for it to be in team chat
+  ALLY_CHAT:
+    ENABLED: true
+    FORMAT: '&9(Ally) %player%: &e%s'
+    SHORTCUT: '' # Leave empty to disable
+  OFFICER_CHAT:
+    ENABLED: true
+    FORMAT: '&d(Officer) %player%: &e%s'
+    SHORTCUT: '' # Leave empty to disable
+  CO_LEADER_CHAT:
+    ENABLED: true
+    FORMAT: '&3(Co-Leader) %player%: &e%s'
+    SHORTCUT: '' # Leave empty to disable
+
+FIXES:
+  ENDERCHEST_CRAFTING: false
+  GOLDEN_APPLE_CRAFTING: true
+  GOD_APPLE_CRAFTING: false
+  LOWER_HUNGER_LEVEL: false
+  BOAT_PLACING: true # Will only work in water if this is true
+  OBSIDIAN_GENS: false
+  MOB_SPAWN_WARZONE: false
+  EASIER_GLISTERING_CRAFT: true
+
+MULTIPLIERS:
+  NETHER_MULTIPLIER: 2 # 1k 1k Overworld will be 500 500 nether
+  SMELT_MULTIPLIER: 2
+
+SIGNS_CONFIG:
+  UP_SIGN:
+    ENABLED: true
+    LINES:
+      - '&4[Elevator]'
+      - 'Up'
+      - ''
+      - ''
+  DOWN_SIGN:
+    ENABLED: true
+    LINES:
+      - '&4[Elevator]'
+      - 'Down'
+      - ''
+      - ''
+  BUY_SIGN:
+    ENABLED: true
+    LINES:
+      - '&a- Buy -'
+      - '%material%'
+      - '%amount%'
+      - '$%price%'
+  SELL_SIGN:
+    ENABLED: true
+    LINES:
+      - '&c- Sell -'
+      - '%material%'
+      - '%amount%'
+      - '$%price%'
+  KIT_SIGN:
+    ENABLED: true
+    CONFIRM_NOT_EMPTY: true # Send confirmation if the players inventory is not empty
+    LINES:
+      - '&9- Kit -' # Create with [kit]!
+      - '%kit%'
+      - ''
+      - ''
+  SUBCLAIM_SIGN:
+    ENABLED: true
+    LINES:
+      - '&4[Subclaim]' # Create with [subclaim]!
+      - '%member%'
+      - ''
+      - ''
+  REFILL_SIGN: # Create with [refill]
+    ENABLED: true
+    MENU_TITLE: '&dRefill'
+    MENU_SIZE: 27
+    COOLDOWN: 5
+    LINES:
+      - ''
+      - '&6[Refill]'
+      - '(Right Click)'
+      - ''
+  QUICK_REFILL_SIGN:
+    ENABLED: true
+    MENU_TITLE: '&dQuick Refill' # Create with [quickrefill]
+    MENU_SIZE: 54
+    COOLDOWN: 120
+    LINES:
+      - ''
+      - '&3[Quick Refill]'
+      - '(Right Click)'
+      - ''
+
+TIMERS_COOLDOWN:
+  OLD_TIMER_FORMAT: false
+  INVINCIBILITY: 3600
+  PVP_TIMER: 1800
+  COMBAT_TAG: 45
+  APPLE: 45
+  ENDER_PEARL: 16
+  GAPPLE: 10800
+  STUCK: 45
+  HQ: 10
+  HQ_ENEMY: 15
+  ARCHER_TAG: 10
+  WARMUP: 3
+  LOGOUT: 45
+  TEAM_CREATE_CD: 30
+  TEAM_RENAME_CD: 30
+  LOCK_CLAIM: 30
+  LFF_COMMAND: 60
+  REQUEST_COMMAND: 60
+  REPORT_COMMAND: 30
+  CAMP: 45
+  OPEN_FAC: 30
+  ANTI_RAID: 30
+
+ANTI_CLEAN:
+  ENABLED: true
+  MEMBERS_REQUIRED: 1
+  COOLDOWN: 60
+  RADIUS: 1000
+  KOTH_RADIUS: 15 # The radius around a capzone that anti clean should not work.
+  DENIED_WORLDS:
+    - 'test'
+
+EOTW_TIMER:
+  PRE_EOTW: 45 # Minutes before EOTW koth is started and teams raidable.
+  RAIDABLE_TIME: 1d12h
+  COMMAND: 'koth start eotw' # When Pre EOTW ends which command should we run
+
+ROD_TIMER:
+  TIME: 3
+  CLASSES_TIME:
+    BARD: 0
+    GHOST: 0
+    ARCHER: 0
+    ROGUE: 0
+    MAGE: 0
+
+PURGE_TIMER:
+  INTRACTABLE:
+    - 'CHEST'
+    - 'TRAPPED_CHEST'
+    - 'FENCE_GATE'
+    - 'WOODEN_DOOR'
+    - 'TRAP_DOOR'
+    - 'DROPPER'
+    - 'DISPENSER'
+    - 'HOPPER'
+    - 'STONE_BUTTON'
+
+SOTW_FLY:
+  ALLOW_SPAWN: true # Allow fly in spawn
+  ALLOW_OWN_CLAIM: true # Allow fly in own claim
+  ALLOW_ANYWHERE: false # Allow fly anywhere
+
+REBOOT_TIMER:
+  COMMAND: 'restart'
+  MESSAGES_SECOND:
+    SECOND_60:
+      - '&7&m---------------------'
+      - '&4[REBOOT] &eServer is rebooting in &c60s&e.'
+      - '&7&m---------------------'
+    SECOND_30:
+      - '&7&m---------------------'
+      - '&4[REBOOT] &eServer is rebooting in &c30s&e.'
+      - '&7&m---------------------'
+    SECOND_10:
+      - '&7&m---------------------'
+      - '&4[REBOOT] &eServer is rebooting in &c10s&e.'
+      - '&7&m---------------------'
+    SECOND_3:
+      - '&7&m---------------------'
+      - '&4[REBOOT] &eServer is rebooting in &c3s&e.'
+      - '&7&m---------------------'
+    SECOND_2:
+      - '&7&m---------------------'
+      - '&4[REBOOT] &eServer is rebooting in &c2s&e.'
+      - '&7&m---------------------'
+    SECOND_1:
+      - '&7&m---------------------'
+      - '&4[REBOOT] &eServer is now rebooting.'
+      - '&7&m---------------------'
+
+SPAWN_TIMER:
+  ENABLED: false # /spawn start a countdown to teleport to spawn?
+  INSTANT_TP_SOTW: true
+  TIME: 45 # Time before they are teleported to spawn
+
+CAMP_TIMER:
+  ALLOW_COMBAT: false
+  ONLY_SPAWN_AND_OWN_CLAIM: true
+  INSTANT_TP_SPAWN: true
+
+LAST_KILLS:
+  LIMIT: 5
+  MESSAGE: '%deathmessage% &7(&f%x%x, %y%y, %z%z&7) &7(%date%&7)'
+
+LAST_DEATHS:
+  LIMIT: 5
+  MESSAGE: '%deathmessage% &7(&f%x%x, %y%y, %z%z&7) &7(%date%&7)'
+
+# All small letters.
+DISABLED_COMMANDS:
+  MAIN_COMMANDS:
+    - 'command'
+  TEAM_SUBCOMMANDS:
+    - 'subcommand'
+
+RENAMING:
+  DENIED_NAMES:
+    - 'bitch'
+    - 'fuck'
+    - 'nigga'
+    - 'nigger'
+    - 'sex'
+    - 'kys'
+  DENIED_ITEMS:
+    - 'TRIPWIRE_HOOK'
+
+REPAIRING:
+  DENIED_ITEMS:
+    - 'TRIPWIRE_HOOK'
+
+COMBAT_TIMER:
+  HQ_TELEPORT: false
+  STUCK_TELEPORT: true
+  LOGOUT_COMMAND: false
+  END_ENTRY: false
+  BLOCKED_COMMANDS:
+    - '/ce'
+
+REPAIR_BLOCK:
+  REPAIR_ALL_COST: 5000
+  REPAIR_HAND_COST: 1000
+
+INVINCIBILITY:
+  END_ENTRY: true
+  HQ_TELEPORT: true
+  ENTER_OWN_CLAIM: true
+
+HQ_TIMER:
+  INSTANT_TP_SPAWN: true
+  INSTANT_TP_SOTW: true
+  ALLOW_TP_OTHER_CLAIM: true # Allow teleports in other players claims
+
+PVP_TIMER:
+  END_ENTRY: false
+  HQ_TELEPORT: false
+  ENTER_OWN_CLAIM: false

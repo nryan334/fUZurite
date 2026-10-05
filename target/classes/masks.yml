@@ -1,0 +1,64 @@
+masks:
+  spiderman:
+    display_name: "&cSpiderman Mask"
+    material: SKULL_ITEM
+    data: 3
+    texture: "e3RleHR1cmVzOnsic2lnbmF0dXJlIjoiMzRkZGZjMjc5MzY0MzhjMjhjM2U3NTAyZjE1YTU2ZjA1MjRkMzQyM2IxNzE1NTE3NzU0ZTM2MzRiYjJhMmU2YzlhYzBhM2I4NzUzZTZhMmUwMzU2MDg5M2ZjYzQ1MTVjMjg0ZmQxNGNiMzFhYmE3ZjEzYmZkZjU2ZDkxZjVjYjYifX0="
+    lore:
+      - "&7Spiderman"
+      - "&7"
+      - "&7Receive a &c6% &7chance to do &a+10% &7critical damage"
+      - "&7to the enemy and double jump every &e8 minutes&7!"
+  flash:
+    display_name: "&cFlash Mask"
+    material: SKULL_ITEM
+    data: 3
+    texture: "e3RleHR1cmVzOnsic2lnbmF0dXJlIjoiMzQ1ZmRkYzI3OTM2NDM4YzI4YzNlNzUwMmYxNWE1NmYwNTI0ZDM0MjNiMTcxNTUxNzc1NGUzNjM0YmIyYTJlNmM5YWMwYTNiODc1M2U2YTJlMDM1NjA4OTNmY2M0NTE1YzI4NGZkMTRjYjMxYWJhN2YxM2JmZGY1NmQ5MWY1Y2I2In19"
+    lore:
+      - "&7Flash"
+      - "&7"
+      - "&7Receive a &c8% &7chance to dodge an enemy's &dNinja Star"
+      - "&7and you can dash every &e5 minutes&7!"
+  venom:
+    display_name: "&cVenom Mask"
+    material: SKULL_ITEM
+    data: 3
+    texture: "e3RleHR1cmVzOnsic2lnbmF0dXJlIjoiMzQ2ZmRkYzI3OTM2NDM4YzI4YzNlNzUwMmYxNWE1NmYwNTI0ZDM0MjNiMTcxNTUxNzc1NGUzNjM0YmIyYTJlNmM5YWMwYTNiODc1M2U2YTJlMDM1NjA4OTNmY2M0NTE1YzI4NGZkMTRjYjMxYWJhN2YxM2JmZGY1NmQ5MWY1Y2I2In19"
+    lore:
+      - "&7Venom"
+      - "&7"
+      - "&7Receive a &c15% &7less cooldown from Enderpearl,"
+      - "&33% &7chance to receive &bStrength 1 &7for hitting for &e5 seconds"
+      - "&7and you have a &c10% &7chance of surviving a death&7!"
+  ironman:
+    display_name: "&cIronman Mask"
+    material: SKULL_ITEM
+    data: 3
+    texture: "e3RleHR1cmVzOnsic2lnbmF0dXJlIjoiMzQ3ZmRkYzI3OTM2NDM4YzI4YzNlNzUwMmYxNWE1NmYwNTI0ZDM0MjNiMTcxNTUxNzc1NGUzNjM0YmIyYTJlNmM5YWMwYTNiODc1M2U2YTJlMDM1NjA4OTNmY2M0NTE1YzI4NGZkMTRjYjMxYWJhN2YxM2JmZGY1NmQ5MWY1Y2I2In19"
+    lore:
+      - "&7Ironman"
+      - "&7"
+      - "&7Receive a &c10% &7chance to"
+      - "&7bypass Partner Item cooldown,"
+      - "&7your &bSwitcher's &7range increases by &55 &7more blocks"
+      - "&7and &c5% &7chance to receive &eSpeed III &7while performing a &b1.7&7!"
+  thor:
+    display_name: "&cThor Mask"
+    material: SKULL_ITEM
+    data: 3
+    texture: "e3RleHR1cmVzOnsic2lnbmF0dXJlIjoiMzQ4ZmRkYzI3OTM2NDM4YzI4YzNlNzUwMmYxNWE1NmYwNTI0ZDM0MjNiMTcxNTUxNzc1NGUzNjM0YmIyYTJlNmM5YWMwYTNiODc1M2U2YTJlMDM1NjA4OTNmY2M0NTE1YzI4NGZkMTRjYjMxYWJhN2YxM2JmZGY1NmQ5MWY1Y2I2In19"
+    lore:
+      - "&7Thor"
+      - "&7"
+      - "&7Each hit has a &c5% &7of archer tagging your enemy,"
+      - "&7and you can run faster every &e5 minutes&7!"
+  hulk:
+    display_name: "&cHulk Mask"
+    material: SKULL_ITEM
+    data: 3
+    texture: "e3RleHR1cmVzOnsic2lnbmF0dXJlIjoiMzQ5ZmRkYzI3OTM2NDM4YzI4YzNlNzUwMmYxNWE1NmYwNTI0ZDM0MjNiMTcxNTUxNzc1NGUzNjM0YmIyYTJlNmM5YWMwYTNiODc1M2U2YTJlMDM1NjA4OTNmY2M0NTE1YzI4NGZkMTRjYjMxYWJhN2YxM2JmZGY1NmQ5MWY1Y2I2In19"
+    lore:
+      - "&7Hulk"
+      - "&7"
+      - "&7Each hit has a &c3% &7of striking lightning"
+      - "&7and receiving &e5 seconds &7of &bStrength II&7!"

@@ -1,0 +1,363 @@
+BARD_CLASS:
+  ENABLED: true
+  MAX_ENERGY: 120
+  BARD_DISTANCE: 25
+  BARD_COOLDOWN: 10 # Cooldown of bard effects
+  CLASS_LIMIT: -1 # -1 to disable
+  KNOCKBACK_ITEM: # Pushback effect when right-clicked
+    ENABLED: true
+    ENERGY_REQUIRED: 20
+    MATERIAL: 'COAL'
+    DATA: 0
+    RADIUS: 8
+    MULTIPLIER: 1.65
+    YVELOCITY: 0.65
+  ARMOR:
+    HELMET: 'GOLD_HELMET'
+    CHESTPLATE: 'GOLD_CHESTPLATE'
+    LEGGINGS: 'GOLD_LEGGINGS'
+    BOOTS: 'GOLD_BOOTS'
+  PASSIVE_EFFECTS:
+    - 'SPEED, MAX_VALUE, 2'
+    - 'REGENERATION, MAX_VALUE, 1'
+    - 'DAMAGE_RESISTANCE, MAX_VALUE, 2'
+  HOLDABLE_EFFECTS:
+    # Create as many as you want under this.
+    SPEED:
+      EFFECT: 'SPEED, 5s, 2'
+      MATERIAL: SUGAR
+      DATA: 0
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    JUMP:
+      EFFECT: 'JUMP, 5s, 2'
+      MATERIAL: FEATHER
+      DATA: 0
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    STRENGTH:
+      EFFECT: 'INCREASE_DAMAGE, 5s, 1'
+      MATERIAL: BLAZE_POWDER
+      DATA: 0
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    RESISTANCE:
+      EFFECT: 'DAMAGE_RESISTANCE, 5s, 1'
+      MATERIAL: IRON_INGOT
+      DATA: 0
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    REGENERATION:
+      EFFECT: 'REGENERATION, 5s, 1'
+      MATERIAL: GHAST_TEAR
+      DATA: 0
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    FIRE_RESISTANCE:
+      EFFECT: 'FIRE_RESISTANCE, 5s, 1'
+      MATERIAL: MAGMA_CREAM
+      DATA: 0
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    INVISIBILITY:
+      EFFECT: 'INVISIBILITY, 5s, 1'
+      MATERIAL: INK_SACK
+      DATA: 0
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+  CLICKABLE_EFFECTS:
+    # Create as many as you want under this.
+    SPEED:
+      EFFECT: 'SPEED, 8s, 3'
+      MATERIAL: SUGAR
+      DATA: 0
+      ENERGY_REQUIRED: 25
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    JUMP:
+      EFFECT: 'JUMP, 8s, 7'
+      MATERIAL: FEATHER
+      DATA: 0
+      ENERGY_REQUIRED: 35
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    STRENGTH:
+      EFFECT: 'INCREASE_DAMAGE, 6s, 2'
+      MATERIAL: BLAZE_POWDER
+      DATA: 0
+      ENERGY_REQUIRED: 45
+      EFFECT_SELF: false
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    RESISTANCE:
+      EFFECT: 'DAMAGE_RESISTANCE, 6s, 3'
+      MATERIAL: IRON_INGOT
+      DATA: 0
+      ENERGY_REQUIRED: 35
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    REGENERATION:
+      EFFECT: 'REGENERATION, 6s, 3'
+      MATERIAL: GHAST_TEAR
+      DATA: 0
+      ENERGY_REQUIRED: 40
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    FIRE_RESISTANCE:
+      EFFECT: 'FIRE_RESISTANCE, 6s, 2'
+      MATERIAL: MAGMA_CREAM
+      DATA: 0
+      ENERGY_REQUIRED: 30
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    INVISIBILITY:
+      EFFECT: 'INVISIBILITY, 80s, 2'
+      MATERIAL: INK_SACK
+      DATA: 0
+      ENERGY_REQUIRED: 45
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: true
+      EFFECT_ENEMIES: false
+    WITHER:
+      EFFECT: 'WITHER, 6s, 2'
+      MATERIAL: SPIDER_EYE
+      DATA: 0
+      ENERGY_REQUIRED: 35
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: false
+      EFFECT_ENEMIES: true
+
+MAGE_CLASS:
+  ENABLED: true
+  MAX_ENERGY: 120
+  MAGE_DISTANCE: 25
+  MAGE_COOLDOWN: 10 # Cooldown of mage effects
+  CLASS_LIMIT: -1 # -1 to disable
+  ARMOR:
+    HELMET: 'GOLD_HELMET'
+    CHESTPLATE: 'CHAINMAIL_CHESTPLATE'
+    LEGGINGS: 'CHAINMAIL_LEGGINGS'
+    BOOTS: 'GOLD_BOOTS'
+  PASSIVE_EFFECTS:
+    - 'SPEED, MAX_VALUE, 2'
+    - 'REGENERATION, MAX_VALUE, 1'
+    - 'DAMAGE_RESISTANCE, MAX_VALUE, 2'
+  CLICKABLE_EFFECTS:
+    # Create as many as you want under this.
+    SLOWNESS:
+      EFFECT: 'SLOW, 7s, 2'
+      MATERIAL: GOLD_NUGGET
+      DATA: 0
+      ENERGY_REQUIRED: 35
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: false
+      EFFECT_ENEMIES: true
+    WEAKNESS:
+      EFFECT: 'WEAKNESS, 7s, 2'
+      MATERIAL: COAL
+      DATA: 0
+      ENERGY_REQUIRED: 30
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: false
+      EFFECT_ENEMIES: true
+    HUNGER:
+      EFFECT: 'HUNGER, 7s, 4'
+      MATERIAL: ROTTEN_FLESH
+      DATA: 0
+      ENERGY_REQUIRED: 25
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: false
+      EFFECT_ENEMIES: true
+    NAUSEA:
+      EFFECT: 'CONFUSION, 7s, 4'
+      MATERIAL: SEEDS
+      DATA: 0
+      ENERGY_REQUIRED: 40
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: false
+      EFFECT_ENEMIES: true
+    WITHER:
+      EFFECT: 'WITHER, 7s, 2'
+      MATERIAL: SPIDER_EYE
+      DATA: 0
+      ENERGY_REQUIRED: 35
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: false
+      EFFECT_ENEMIES: true
+    POSION:
+      EFFECT: 'POISON, 7s, 1'
+      MATERIAL: INK_SACK
+      DATA: 2
+      ENERGY_REQUIRED: 45
+      EFFECT_SELF: true
+      EFFECT_FRIENDLIES: false
+      EFFECT_ENEMIES: true
+
+ARCHER_CLASS:
+  ENABLED: true
+  ARCHER_TAG_DAMAGE: 2.0
+  ARCHER_HALF_FORCE: 1.0
+  ALREADY_TAGGED_DAMAGE: 1.5
+  TAGGED_DAMAGE_MULTIPLIER: 1.25 # eg 1.50 for 50% extra damage or 2.0 for 100% extra damage
+  CLASS_LIMIT: 3 # -1 to disable
+  TAKE_INVIS: true
+  INVIS_TIME: 10
+  ARMOR:
+    HELMET: 'LEATHER_HELMET'
+    CHESTPLATE: 'LEATHER_CHESTPLATE'
+    LEGGINGS: 'LEATHER_LEGGINGS'
+    BOOTS: 'LEATHER_BOOTS'
+  PASSIVE_EFFECTS:
+    - 'DAMAGE_RESISTANCE, MAX_VALUE, 2'
+    - 'SPEED, MAX_VALUE, 3'
+  ARCHER_BUFFS:
+    # Add as many as u want below
+    SPEED:
+      MATERIAL: 'SUGAR'
+      DISPLAY_NAME: '&b&lSpeed&7: &c' # Used in scoreboards
+      DATA: 0
+      COOLDOWN: 30
+      EFFECT: 'SPEED, 6s, 4'
+    JUMP:
+      MATERIAL: 'FEATHER'
+      DISPLAY_NAME: '&a&lJump&7: &c' # Used in scoreboards
+      DATA: 0
+      COOLDOWN: 30
+      EFFECT: 'JUMP, 6s, 7'
+    RESISTANCE:
+      MATERIAL: 'IRON_INGOT'
+      DISPLAY_NAME: '&8&lResistance&7: &c' # Used in scoreboards
+      DATA: 0
+      COOLDOWN: 60
+      EFFECT: 'DAMAGE_RESISTANCE, 5s, 3'
+
+MINER_CLASS:
+  ENABLED: true
+  MINER_INVISIBILITY: 20 # Y-Level to receive invis
+  CLASS_LIMIT: -1 # -1 to disable
+  ARMOR:
+    HELMET: 'IRON_HELMET'
+    CHESTPLATE: 'IRON_CHESTPLATE'
+    LEGGINGS: 'IRON_LEGGINGS'
+    BOOTS: 'IRON_BOOTS'
+  PASSIVE_EFFECTS:
+    - 'FAST_DIGGING, MAX_VALUE, 2'
+    - 'NIGHT_VISION, MAX_VALUE, 1'
+    - 'FIRE_RESISTANCE, MAX_VALUE, 1'
+  MINER_EFFECTS:
+    # Create as many as you want under this.
+    50: 'FAST_DIGGING, MAX_VALUE, 3'
+    100: 'SPEED, MAX_VALUE, 1'
+    125: 'FAST_DIGGING, MAX_VALUE, 4'
+    250: 'FIRE_RESISTANCE, MAX_VALUE, 1'
+    400: 'SPEED, MAX_VALUE, 2'
+    600: 'REGENERATION, MAX_VALUE, 1'
+    1000: 'DAMAGE_RESISTANCE, MAX_VALUE, 2'
+
+GHOST_CLASS:
+  ENABLED: true
+  MODE_ITEM: QUARTZ
+  TOTAL_TIME: 15 # You can choose what happens at each second
+  QUARTZ_COOLDOWN: 45
+  DEFAULT_MODE: '&aNormal'
+  CLASS_LIMIT: 1 # -1 to disable
+  SHOW_ARMOR_ON_HIT:
+    ENABLED: true
+    MODE: '&7Stealth'
+  ARMOR:
+    HELMET: 'CHAINMAIL_HELMET'
+    CHESTPLATE: 'DIAMOND_CHESTPLATE'
+    LEGGINGS: 'CHAINMAIL_LEGGINGS'
+    BOOTS: 'DIAMOND_BOOTS'
+  PASSIVE_EFFECTS:
+    - 'SPEED, MAX_VALUE, 2'
+    - 'DAMAGE_RESISTANCE, MAX_VALUE, 2'
+    - 'FIRE_RESISTANCE, MAX_VALUE, 1'
+  PER_SECOND_MODE:
+    0: # At the start we put them in stealth and hide armor and give effects
+      MODE: '&7Stealth'
+      HIDE_ARMOR: true
+      HIDE_ARMOR_TIME: 5
+      REMOVE_EFFECTS: { }
+      EFFECTS:
+        - 'SPEED, 5s, 5'
+        - 'ABSORPTION, 5s, 1'
+        - 'INVISIBILITY, 5s, 1'
+    4: # 5 Seconds in we show armor and remove speed/resistance
+      MODE: '&7Stealth'
+      HIDE_ARMOR: false
+      HIDE_ARMOR_TIME: 5
+      REMOVE_EFFECTS:
+        - 'DAMAGE_RESISTANCE'
+        - 'SPEED'
+      EFFECTS: { }
+    9:
+      MODE: '&4Power'
+      HIDE_ARMOR: false
+      HIDE_ARMOR_TIME: 5
+      REMOVE_EFFECTS: { }
+      EFFECTS:
+        - 'SPEED, MAX_VALUE, 1'
+        - 'INCREASE_DAMAGE, 5s, 2'
+        - 'ABSORPTION, 5s, 2'
+        - 'DAMAGE_RESISTANCE, 5s, 1'
+    14:
+      MODE: '&aNormal'
+      HIDE_ARMOR: false
+      HIDE_ARMOR_TIME: 5
+      REMOVE_EFFECTS: { }
+      EFFECTS:
+        - 'SPEED, MAX_VALUE, 2'
+        - 'DAMAGE_RESISTANCE, MAX_VALUE, 2'
+
+ROGUE_CLASS:
+  ENABLED: true
+  BACKSTAB_ITEM: 'GOLD_SWORD'
+  BACKSTAB_SOUND: 'ITEM_BREAK'
+  BACKSTAB_EFFECT: 'REDSTONE_BLOCK'
+  BACKSTAB_DAMAGE: 3.5
+  BACKSTAB_COOLDOWN: 3
+  CLASS_LIMIT: -1 # -1 to disable
+  ARMOR:
+    HELMET: 'CHAINMAIL_HELMET'
+    CHESTPLATE: 'CHAINMAIL_CHESTPLATE'
+    LEGGINGS: 'CHAINMAIL_LEGGINGS'
+    BOOTS: 'CHAINMAIL_BOOTS'
+  PASSIVE_EFFECTS:
+    - 'SPEED, MAX_VALUE, 3'
+    - 'JUMP, MAX_VALUE, 2'
+    - 'DAMAGE_RESISTANCE, MAX_VALUE, 1'
+  BACKSTAB_EFFECTS: # for the player in rogue
+    - 'SLOW, 3s, 3'
+  ROGUE_BUFFS:
+    # Add as many as u want below
+    SPEED:
+      MATERIAL: 'SUGAR'
+      DISPLAY_NAME: '&b&lSpeed&7: &c' # Used in scoreboards
+      DATA: 0
+      COOLDOWN: 30
+      EFFECT: 'SPEED, 6s, 5'
+    JUMP:
+      MATERIAL: 'FEATHER'
+      DISPLAY_NAME: '&a&lJump&7: &c' # Used in scoreboards
+      DATA: 0
+      COOLDOWN: 30
+      EFFECT: 'JUMP, 6s, 7'
+    RESISTANCE:
+      MATERIAL: 'IRON_INGOT'
+      DISPLAY_NAME: '&8&lResistance&7: &c' # Used in scoreboards
+      DATA: 0
+      COOLDOWN: 60
+      EFFECT: 'DAMAGE_RESISTANCE, 5s, 3'

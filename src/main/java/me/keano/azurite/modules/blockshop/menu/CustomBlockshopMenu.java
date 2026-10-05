@@ -1,0 +1,36 @@
+package me.keano.azurite.modules.blockshop.menu;
+
+import me.keano.azurite.modules.framework.menu.Menu;
+import me.keano.azurite.modules.framework.menu.MenuManager;
+import me.keano.azurite.modules.framework.menu.button.Button;
+import org.bukkit.entity.Player;
+
+import java.util.Map;
+
+/**
+ * Copyright (c) 2025. Keano
+ * Use or redistribution of source or file is
+ * only permitted if given explicit permission.
+ */
+public class CustomBlockshopMenu extends Menu {
+
+    private final String path;
+
+    public CustomBlockshopMenu(MenuManager manager, Player player, String path) {
+        super(
+                manager,
+                player,
+                manager.getBlockshopConfig().getString(path + ".TITLE"),
+                manager.getBlockshopConfig().getInt(path + ".SIZE"),
+                true
+        );
+        this.path = path;
+    }
+
+    @Override
+    public Map<Integer, Button> getButtons(Player player) {
+        Map<Integer, Button> all = getInstance().getBlockshopManager().getAllButtons(player);
+        all.putAll(getInstance().getBlockshopManager().getButtons(player, path + ".BUTTONS"));
+        return all;
+    }
+}

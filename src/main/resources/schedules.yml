@@ -1,0 +1,97 @@
+# TimeZone for scheduler, Use https://garygregory.wordpress.com/2013/06/18/what-are-the-java-timezone-ids/
+SCHEDULE_CONFIG:
+  TIME_ZONE: 'America/New_York'
+  KOTH_SCHEDULES_PLAYERS_REQUIRED: 5 # At least 5 players required to run koth commands.
+  PLAYERS_REQUIRED_MESSAGE: '&cA koth would have been started but %amount% players need to be online.'
+  NO_SCHEDULE_NAME: '&fNone Scheduled'
+  NO_SCHEDULE_TIME: ''
+
+SCHEDULES:
+  HOURLY: # Name, Hour, Commands
+    - '&6Glowstone Reset, 00, broadcast &6[Glowstone Mountain] &eGlowstone Mountain has been reset.;mountain respawn Glowstone'
+    - '&3Ore Mountain Reset, 00, broadcast &3[Ore Mountain] &eOre Mountain has been reset.;mountain respawn OreMountain'
+  DAILY: # Name, Time, Commands
+    - 'NONE, 23:30, broadcast &4&l[REBOOT] &eServer will be rebooting in 30mins.;customtimer create reboot &4&lReboot 30m'
+    - 'NONE, 23:45, broadcast &4&l[REBOOT] &eServer will be rebooting in 15mins.'
+    - 'NONE, 23:55, broadcast &4&l[REBOOT] &eServer will be rebooting in 5mins.'
+    - 'NONE, 23:59, broadcast &4&l[REBOOT] &eServer will be rebooting in 1min. Saving data now!;save-all;azurite forcesave'
+    - '&4Reboot, 00:00, restart'
+  NORMAL: # Name, Time, Day, Commands
+    - '&aSOTW, 15:00, SATURDAY, sotw start 2h;whitelist off'
+    - '&5Citadel, 15:00, SUNDAY, koth  start citadel'
+
+KOTH_SCHEDULES: # Name, Time, Day, Commands
+  - '&9Angel Koth, 15:00, 16, koth start angel;command2;command3'
+  - '&5Citadel, 16:00, 15, koth start citadel;command2;command3'
+  - '&4Purge, 15:00, 14, purge start 1h;command2;command3'
+  - '&3Monday, 02:00, MONDAY, koth start monday;command2' # This will run every monday at 2AM
+  - '&2Tuesday, 02:00, TUESDAY, koth start tuesday;command2' # This will run every tuesday at 2AM
+  - '&aWednesday, 02:00, WEDNESDAY, koth start wednesday;command2' # This will run every wednesday at 2AM
+  - '&9Thursday, 02:00, THURSDAY, koth start thursday;command2' # This will run every thursday at 2AM
+  - '&6Friday, 02:00, FRIDAY, koth start friday;command2' # This will run every friday at 2AM
+  - '&cSaturday, 02:00, SATURDAY, koth start saturday;command2' # This will run every saturday at 2AM
+  - '&bSunday, 02:00, SUNDAY, koth start sunday;command2' # This will run every sunday at 2AM
+  - '&dAzurite Koth, 20:00, DAILY, koth start azurite;koth start next' # Run at 8PM daily
+  - '&4Pearl Koth, 14:00, DAILY, koth start pearl;koth start opel' # Run at 2PM daily
+
+TIPS:
+  ENABLED: true
+  SECONDS: 180 # 3mins we send a tip
+  SOUND: '' # Empty to disable
+  TIP_TYPES: # Create as many as u like under here
+    TEAM_LIST:
+      - '&7&m----------------------'
+      - '&d&lTeam List Tip'
+      - '&eYou can use /team sort to sort how'
+      - '&eyou would like /team list and tablists'
+      - '&eteam list to look.'
+      - '&7&m----------------------'
+    SCHEDULE:
+      - '&7&m----------------------'
+      - '&d&lScheduler Tip'
+      - '&eYou can use /schedule to view'
+      - '&ewhat time our events happen.'
+      - '&7&m----------------------'
+    PUSHBACK:
+      - '&7&m----------------------'
+      - '&d&lBard Pushback Tip'
+      - '&eYou can right click a piece of coal'
+      - '&ewhile being active in the bard class'
+      - '&eto pushback any near enemies.'
+      - '&7&m----------------------'
+    ABILITIES:
+      - '&7&m----------------------'
+      - '&d&lAbilities Tip'
+      - '&eYou can view our abilities by'
+      - '&etyping the command /abilities'
+      - '&7&m----------------------'
+    CLAIM_SCOREBOARD:
+      - '&7&m----------------------'
+      - '&d&lClaim Scoreboard Tip'
+      - '&eYou can use /settings to toggle'
+      - '&ethe claim shown on your scoreboard.'
+      - '&7&m----------------------'
+    STATS:
+      - '&7&m----------------------'
+      - '&d&lStats Tip'
+      - '&eYou can view your stats by'
+      - '&erunning the command /stats.'
+      - '&7&m----------------------'
+    KILLTAGS:
+      - '&7&m----------------------'
+      - '&d&lKilltags Tip'
+      - '&eYou can change the way your kill'
+      - '&emessages look via /killtags.'
+      - '&7&m----------------------'
+    FALLTRAP:
+      - '&7&m----------------------'
+      - '&d&lFalltrap Tip'
+      - '&eYou can create a auto falltrap task'
+      - '&evia the command /f falltrap'
+      - '&7&m----------------------'
+    BASE:
+      - '&7&m----------------------'
+      - '&d&lBase Tip'
+      - '&eYou can create a auto base task'
+      - '&evia the command /f base'
+      - '&7&m----------------------'

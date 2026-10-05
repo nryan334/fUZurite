@@ -1,0 +1,43 @@
+name: Azurite
+main: me.keano.azurite.HCF
+version: 1.0-SNAPSHOT
+author: Keqno
+description: Made for Azurite
+api-version: 1.13
+loadbefore:
+  - ShopGUIPlus
+  - EconomyShopGUI
+softdepend:
+  - Azurite-Core
+  - Apollo-Bukkit
+  - ViaVersion
+  - ProtocolSupport
+  - Vault
+  - HolographicDisplays
+  - VortexPearls
+  - PlaceholderAPI
+  - CheatBreakerAPI
+  - Alchemist
+  - Holiday
+  - AquaCore
+  - Zoot
+  - Zoom
+  - Mizu
+  - Atom
+  - Basic
+  - ZPermissions
+  - HestiaCore
+  - Phoenix
+  - pxLoader
+commands:
+  masks:
+    description: Open the Masks GUI
+    aliases: [mask]
+    permission: azurite.masks.use
+permissions:
+  azurite.masks.use:
+    description: Allows use of the masks command
+    default: true
+  azurite.masks.give:
+    description: Allows giving masks to players
+    default: op

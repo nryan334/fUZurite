@@ -1,0 +1,199 @@
+gui:
+  title: "&8Masks"
+  rows: 6
+  decorative_items:
+    - slot: 0
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 1
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 2
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 3
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 4
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 5
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 6
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 7
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 8
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 9
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 11
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 13
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 15
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 17
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 18
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 19
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 20
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 21
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 22
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 23
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 24
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 25
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 26
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 27
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 29
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 31
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 33
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 34
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 35
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 36
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 37
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 38
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 39
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 40
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 41
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 42
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 43
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 44
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 45
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 46
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 47
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 48
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 49
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 50
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 51
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 52
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+    - slot: 53
+      material: STAINED_GLASS_PANE
+      data: 7
+      name: " "
+  mask_slots:
+    spiderman: 10
+    flash: 12
+    venom: 14
+    ironman: 16
+    thor: 28
+    hulk: 30

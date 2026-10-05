@@ -1,0 +1,28 @@
+KILLSTREAKS:
+  ENABLED: true
+  PER_KILL:
+    3:
+      NAME: '&aDebuffs'
+      COMMANDS: { }
+      EFFECTS: { }
+      ITEMS: # Material, Amount, Data, Name, Lore, Enchants
+        - 'POTION, 1, 16388, None, &7Gotten from;&7Killstreak, None'
+        - 'POTION, 1, 16394, None, &7Gotten from;&7Killstreak, None'
+    5:
+      NAME: '&cStrength'
+      COMMANDS: { }
+      EFFECTS: # Effect, Duration, Level
+        - 'INCREASE_DAMAGE, 30s, 1'
+      ITEMS: { }
+    7:
+      NAME: '&2$2000'
+      COMMANDS:
+        - 'ecomanage add %player% 2000'
+      EFFECTS: { }
+      ITEMS: { }
+    10:
+      NAME: '&dFortune Pickaxe'
+      COMMANDS: { }
+      EFFECTS: { }
+      ITEMS: # Material, Amount, Data, Name, Lore, Enchants
+        - 'DIAMOND_PICKAXE, 1, 0, None, None, LOOT_BONUS_BLOCKS:3;DURABILITY:3' # Fortune 3, Unbreaking 3

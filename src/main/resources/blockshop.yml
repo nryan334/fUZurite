@@ -1,0 +1,1898 @@
+# To open a menu on click add the section below. (Click is optional if you want only certain things to happen)
+# OPEN_MENU:
+#   NAME: <menu name>
+#   CLICK: <LEFT,SHIFT_LEFT,RIGHT,SHIFT_RIGHT,MIDDLE>
+#
+# To buy a block
+#  BUY_BLOCK:
+#    MATERIAL: 'SMOOTH_BRICK'
+#    PRICE: 500
+#    AMOUNT: 16
+#    DATA: 2
+#    SOUND_NO_MONEY: 'ITEM_BREAK'
+#
+# To sell a block
+#  SELL_BLOCK:
+#    MATERIAL: 'SMOOTH_BRICK'
+#    PRICE: 500
+#    AMOUNT: 16
+#    DATA: 2
+#
+#
+
+# These buttons will remain in every menu.
+EVERY_MENU_BUTTONS:
+  BUILDING_BLOCKS:
+    NAME: '&dBuilding Blocks'
+    MATERIAL: 'GRASS'
+    SLOT: 2
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'Blockshop'
+  SAND_BLOCKS:
+    NAME: '&dSand Blocks'
+    MATERIAL: 'SANDSTONE'
+    SLOT: 3
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'Sandstone'
+  WOOL:
+    NAME: '&dWool Blocks'
+    MATERIAL: 'WOOL'
+    SLOT: 4
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'Wools'
+  STAINED_GLASS:
+    NAME: '&dStained Glass'
+    MATERIAL: 'STAINED_GLASS'
+    SLOT: 5
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'Stained_Glass'
+  STAINED_CLAY:
+    NAME: '&dStained Clay'
+    MATERIAL: 'STAINED_CLAY'
+    SLOT: 6
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'Stained_Clay'
+  NETHER_BLOCKS:
+    NAME: '&dNether Blocks'
+    MATERIAL: 'NETHER_BRICK'
+    SLOT: 7
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'Nether_Blocks'
+  DECORATION:
+    NAME: '&dDecoration'
+    MATERIAL: 'LEAVES'
+    SLOT: 8
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'Decorations'
+  # Bottom Section
+  BUY_SHOP:
+    NAME: '&aBuy Shop'
+    MATERIAL: 'INK_SACK'
+    SLOT: 49
+    DATA: 10
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'BuyShop'
+  PLAYER_BALANCE:
+    NAME: '&d%player%'
+    MATERIAL: 'SKULL_ITEM'
+    DATA: 3
+    SLOT: 50
+    LORE:
+      - '&eBalance: &2$&a%balance%'
+  SELL_SHOP:
+    NAME: '&cSell Shop'
+    MATERIAL: 'INK_SACK'
+    DATA: 1
+    SLOT: 51
+    SOUND: 'CLICK'
+    OPEN_MENU:
+      NAME: 'SellShop'
+  # Glass Section
+  GLASS_1:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    SLOT: 1
+  GLASS_2:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    SLOT: 9
+  GLASS_10-19:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    SLOT: 10-19
+  GLASS_27-28:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    SLOT: 27-28
+  GLASS_36-37:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    SLOT: 36-37
+  GLASS_45-48:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    SLOT: 45-48
+  GLASS_52-54:
+    NAME: '&7'
+    MATERIAL: 'STAINED_GLASS_PANE'
+    DATA: 15
+    SLOT: 52-54
+
+# /blockshop
+MAIN_MENU:
+  TITLE: '&dBuilding Blocks'
+  SIZE: 54
+  BUTTONS:
+    GLASS_OPEN:
+      NAME: '&aCurrently Open'
+      MATERIAL: 'STAINED_GLASS_PANE'
+      DATA: 5
+      SLOT: 11
+    GRASS:
+      NAME: '&bGrass Block &7(x16)'
+      MATERIAL: 'GRASS'
+      SLOT: 20
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'GRASS'
+        PRICE: 500
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    STONE:
+      NAME: '&bStone Block &7(x16)'
+      MATERIAL: 'STONE'
+      SLOT: 21
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'STONE'
+        PRICE: 500
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    STONE_BRICK:
+      NAME: '&bStone Brick &7(x16)'
+      MATERIAL: 'SMOOTH_BRICK'
+      SLOT: 22
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'SMOOTH_BRICK'
+        PRICE: 500
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    MOSSY_STONE_BRICK:
+      NAME: '&bMossy Stone Brick &7(x16)'
+      MATERIAL: 'SMOOTH_BRICK'
+      SLOT: 23
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      DATA: 1
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'SMOOTH_BRICK'
+        PRICE: 500
+        AMOUNT: 16
+        DATA: 1
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    CRACKED_STONE_BRICK:
+      NAME: '&bCracked Stone Brick &7(x16)'
+      MATERIAL: 'SMOOTH_BRICK'
+      SLOT: 24
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      DATA: 2
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'SMOOTH_BRICK'
+        PRICE: 500
+        AMOUNT: 16
+        DATA: 2
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    CHISELED_STONE_BRICK:
+      NAME: '&bChiseled Stone Brick &7(x16)'
+      MATERIAL: 'SMOOTH_BRICK'
+      SLOT: 25
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      DATA: 3
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'SMOOTH_BRICK'
+        PRICE: 500
+        AMOUNT: 16
+        DATA: 3
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    COBBLESTONE:
+      NAME: '&bCobblestone Block &7(x16)'
+      MATERIAL: 'COBBLESTONE'
+      SLOT: 26
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'COBBLESTONE'
+        PRICE: 500
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    MOSSY_COBBLESTONE:
+      NAME: '&bMossy Cobblestone Block &7(x16)'
+      MATERIAL: 'MOSSY_COBBLESTONE'
+      SLOT: 29
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'MOSSY_COBBLESTONE'
+        PRICE: 500
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    POLISHED_ANDESITE:
+      NAME: '&bPolished Andesite Block &7(x16)'
+      MATERIAL: 'STONE'
+      SLOT: 30
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      DATA: 6
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'STONE'
+        PRICE: 500
+        AMOUNT: 16
+        DATA: 6
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    POLISHED_GRANITE:
+      NAME: '&bPolished Granite Block &7(x16)'
+      MATERIAL: 'STONE'
+      SLOT: 31
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      DATA: 2
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'STONE'
+        PRICE: 500
+        AMOUNT: 16
+        DATA: 2
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    BRICKS:
+      NAME: '&bBrick Block &7(x16)'
+      MATERIAL: 'BRICK'
+      SLOT: 32
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'BRICK'
+        PRICE: 500
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    COARSE_DIRT:
+      NAME: '&bCoarse Dirt Block &7(x16)'
+      MATERIAL: 'DIRT'
+      SLOT: 33
+      AMOUNT: 16
+      DATA: 1
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'DIRT'
+        PRICE: 500
+        AMOUNT: 16
+        DATA: 1
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    PODZOL:
+      NAME: '&bPodzol Dirt Block &7(x16)'
+      MATERIAL: 'DIRT'
+      SLOT: 34
+      AMOUNT: 16
+      DATA: 2
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'DIRT'
+        PRICE: 500
+        AMOUNT: 16
+        DATA: 2
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    MYCELIUM:
+      NAME: '&bMycelium Block &7(x16)'
+      MATERIAL: 'MYCEL'
+      SLOT: 35
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a500'
+      BUY_BLOCK:
+        MATERIAL: 'MYCEL'
+        PRICE: 500
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+
+# /buyshop
+BUY_SHOP_MENU:
+  TITLE: '&dBuy Shop'
+  SIZE: 54
+  BUTTONS:
+    GLASS_OPEN:
+      NAME: '&aCurrently Open'
+      MATERIAL: 'STAINED_GLASS_PANE'
+      DATA: 5
+      SLOT: 48
+    CROWBAR:
+      NAME: '&bCrowbar &7(x1)'
+      MATERIAL: 'CROWBAR'
+      SLOT: 20
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a2000'
+      BUY_BLOCK:
+        MATERIAL: 'CROWBAR'
+        PRICE: 2000
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    SPECKLED_MELON:
+      NAME: '&bGlistering Melon &7(x16)'
+      MATERIAL: 'SPECKLED_MELON'
+      SLOT: 21
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'SPECKLED_MELON'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    MELON_SEEDS:
+      NAME: '&bMelon Seed &7(x16)'
+      MATERIAL: 'MELON_SEEDS'
+      SLOT: 22
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'MELON_SEEDS'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    BLAZE_ROD:
+      NAME: '&bBlaze Rod &7(x16)'
+      MATERIAL: 'BLAZE_ROD'
+      SLOT: 23
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'BLAZE_ROD'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    FERMENTED_SPIDER_EYE:
+      NAME: '&bFermented Spider Eye &7(x16)'
+      MATERIAL: 'FERMENTED_SPIDER_EYE'
+      SLOT: 24
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'FERMENTED_SPIDER_EYE'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    NETHER_WART:
+      NAME: '&bNether Wart &7(x16)'
+      MATERIAL: 'NETHER_STALK'
+      SLOT: 25
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'NETHER_STALK'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    SPIDER_EYE:
+      NAME: '&bSpider Eye &7(x16)'
+      MATERIAL: 'SPIDER_EYE'
+      SLOT: 26
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'SPIDER_EYE'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    FEATHER:
+      NAME: '&bFeather &7(x16)'
+      MATERIAL: 'FEATHER'
+      SLOT: 29
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'FEATHER'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    SLIME_BALL:
+      NAME: '&bSlime Ball &7(x16)'
+      MATERIAL: 'SLIME_BALL'
+      SLOT: 30
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'SLIME_BALL'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    BEACON:
+      NAME: '&bBeacon &7(x1)'
+      MATERIAL: 'BEACON'
+      SLOT: 31
+      AMOUNT: 1
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a30,000'
+      BUY_BLOCK:
+        MATERIAL: 'BEACON'
+        PRICE: 30000
+        AMOUNT: 1
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    COW_EGG:
+      NAME: '&bCow Eggs &7(x2)'
+      MATERIAL: 'MONSTER_EGG'
+      SLOT: 32
+      AMOUNT: 2
+      DATA: 92
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a2000'
+      BUY_BLOCK:
+        MATERIAL: 'MONSTER_EGG'
+        PRICE: 2000
+        AMOUNT: 2
+        DATA: 92
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    GHAST_TEAR:
+      NAME: '&bGhast Tear &7(x16)'
+      MATERIAL: 'GHAST_TEAR'
+      SLOT: 33
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a1000'
+      BUY_BLOCK:
+        MATERIAL: 'GHAST_TEAR'
+        PRICE: 1000
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    SUGAR_CANE:
+      NAME: '&bSugar Cane &7(x16)'
+      MATERIAL: 'SUGAR_CANE'
+      SLOT: 34
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a750'
+      BUY_BLOCK:
+        MATERIAL: 'SUGAR_CANE'
+        PRICE: 750
+        AMOUNT: 16
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    END_PORTAL_FRAME:
+      NAME: '&bEnd Frame &7(x3)'
+      MATERIAL: 'ENDER_PORTAL_FRAME'
+      SLOT: 35
+      AMOUNT: 3
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a5000'
+      BUY_BLOCK:
+        MATERIAL: 'ENDER_PORTAL_FRAME'
+        PRICE: 5000
+        AMOUNT: 3
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    SPIDER_SPAWNER:
+      NAME: '&bSpider Spawner &7(x1)'
+      MATERIAL: 'SPIDER_SPAWNER'
+      SLOT: 38
+      AMOUNT: 1
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a25,000'
+      BUY_BLOCK:
+        MATERIAL: 'SPIDER_SPAWNER'
+        PRICE: 25000
+        AMOUNT: 1
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    ZOMBIE_SPAWNER:
+      NAME: '&bZombie Spawner &7(x1)'
+      MATERIAL: 'ZOMBIE_SPAWNER'
+      SLOT: 39
+      AMOUNT: 1
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a25,000'
+      BUY_BLOCK:
+        MATERIAL: 'ZOMBIE_SPAWNER'
+        PRICE: 25000
+        AMOUNT: 1
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    CSPIDER_SPAWNER:
+      NAME: '&bCave Spider Spawner &7(x1)'
+      MATERIAL: 'CSPIDER_SPAWNER'
+      SLOT: 40
+      AMOUNT: 1
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a25,000'
+      BUY_BLOCK:
+        MATERIAL: 'CSPIDER_SPAWNER'
+        PRICE: 25000
+        AMOUNT: 1
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+    SKELE_SPAWNER:
+      NAME: '&bSkeleton Spawner &7(x1)'
+      MATERIAL: 'SKELE_SPAWNER'
+      SLOT: 41
+      AMOUNT: 1
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&ePrice: &2$&a25,000'
+      BUY_BLOCK:
+        MATERIAL: 'SKELE_SPAWNER'
+        PRICE: 25000
+        AMOUNT: 1
+        SOUND_NO_MONEY: 'ITEM_BREAK'
+
+# /sellshop
+SELL_SHOP_MENU:
+  TITLE: '&dSell Shop'
+  SIZE: 54
+  BUTTONS:
+    GLASS_OPEN:
+      NAME: '&aCurrently Open'
+      MATERIAL: 'STAINED_GLASS_PANE'
+      DATA: 5
+      SLOT: 52
+    COAL_BLOCK:
+      NAME: '&bCoal Block &7(x16)'
+      MATERIAL: 'COAL_BLOCK'
+      SLOT: 21
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eSell: &2$&a800'
+      SELL_BLOCK:
+        MATERIAL: 'COAL_BLOCK'
+        PRICE: 800
+        AMOUNT: 16
+        CLICK: LEFT;RIGHT
+      SELL_ALL_BLOCK_SPECIFIC:
+        MATERIAL: 'COAL_BLOCK'
+        PRICE: 50
+        CLICK: MIDDLE
+    GOLD_BLOCK:
+      NAME: '&bGold Block &7(x16)'
+      MATERIAL: 'GOLD_BLOCK'
+      SLOT: 22
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eSell: &2$&a1200'
+      SELL_BLOCK:
+        MATERIAL: 'GOLD_BLOCK'
+        PRICE: 1200
+        AMOUNT: 16
+        CLICK: LEFT;RIGHT
+      SELL_ALL_BLOCK_SPECIFIC:
+        MATERIAL: 'GOLD_BLOCK'
+        PRICE: 75
+        CLICK: MIDDLE
+    LAPIS_BLOCK:
+      NAME: '&bLapis Block &7(x16)'
+      MATERIAL: 'LAPIS_BLOCK'
+      SLOT: 23
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eSell: &2$&a1000'
+      SELL_BLOCK:
+        MATERIAL: 'LAPIS_BLOCK'
+        PRICE: 1000
+        AMOUNT: 16
+        CLICK: LEFT;RIGHT
+      SELL_ALL_BLOCK_SPECIFIC:
+        MATERIAL: 'LAPIS_BLOCK'
+        PRICE: 62.5
+        CLICK: MIDDLE
+    REDSTONE_BLOCK:
+      NAME: '&bRedstone Block &7(x16)'
+      MATERIAL: 'REDSTONE_BLOCK'
+      SLOT: 24
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eSell: &2$&a1000'
+      SELL_BLOCK:
+        MATERIAL: 'REDSTONE_BLOCK'
+        PRICE: 1000
+        AMOUNT: 16
+        CLICK: LEFT;RIGHT
+      SELL_ALL_BLOCK_SPECIFIC:
+        MATERIAL: 'REDSTONE_BLOCK'
+        PRICE: 62.5
+        CLICK: MIDDLE
+    EMERALD_BLOCK:
+      NAME: '&bEmerald Block &7(x16)'
+      MATERIAL: 'EMERALD_BLOCK'
+      SLOT: 25
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eSell: &2$&a4000'
+      SELL_BLOCK:
+        MATERIAL: 'EMERALD_BLOCK'
+        PRICE: 4000
+        AMOUNT: 16
+        CLICK: LEFT;RIGHT
+      SELL_ALL_BLOCK_SPECIFIC:
+        MATERIAL: 'EMERALD_BLOCK'
+        PRICE: 250
+        CLICK: MIDDLE
+    IRON_BLOCK:
+      NAME: '&bIron Block &7(x16)'
+      MATERIAL: 'IRON_BLOCK'
+      SLOT: 31
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eSell: &2$&a1500'
+      SELL_BLOCK:
+        MATERIAL: 'IRON_BLOCK'
+        PRICE: 1500
+        AMOUNT: 16
+        CLICK: LEFT;RIGHT
+      SELL_ALL_BLOCK_SPECIFIC:
+        MATERIAL: 'IRON_BLOCK'
+        PRICE: 93.75
+        CLICK: MIDDLE
+    SELL_ALL:
+      NAME: '&bSell All &7(x1)'
+      MATERIAL: 'NETHER_STAR'
+      SLOT: 32
+      AMOUNT: 1
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eEmerald Block: &2$&a250'
+        - '&eDiamond Block: &2$&a156.25'
+        - '&eGold Block: &2$&a75'
+        - '&eIron Block: &2$&a93.75'
+        - '&eRedstone Block: &2$&a62.5'
+        - '&eLapis Block: &2$&a62.5'
+        - '&eCoal Block: &2$&a50'
+      SELL_ALL:
+        EMERALD_BLOCK: 250
+        DIAMOND_BLOCK: 156.25
+        GOLD_BLOCK: 75
+        IRON_BLOCK: 93.75
+        REDSTONE_BLOCK: 62.5
+        LAPIS_BLOCK: 62.5
+        COAL_BLOCK: 50
+    DIAMOND_BLOCK:
+      NAME: '&bDiamond Block &7(x16)'
+      MATERIAL: 'DIAMOND_BLOCK'
+      SLOT: 33
+      AMOUNT: 16
+      SOUND: 'ORB_PICKUP'
+      LORE:
+        - '&eSell: &2$&a2500'
+      SELL_BLOCK:
+        MATERIAL: 'DIAMOND_BLOCK'
+        PRICE: 2500
+        AMOUNT: 16
+        CLICK: LEFT;RIGHT
+      SELL_ALL_BLOCK_SPECIFIC:
+        MATERIAL: 'DIAMOND_BLOCK'
+        PRICE: 156.25
+        CLICK: MIDDLE
+
+# Create as many menus as you want here, make sure the name is in capitals
+CUSTOM_BLOCKSHOP_MENUS:
+  SANDSTONE:
+    TITLE: '&dSandstone Blocks'
+    SIZE: 54
+    BUTTONS:
+      GLASS_OPEN:
+        NAME: '&aCurrently Open'
+        MATERIAL: 'STAINED_GLASS_PANE'
+        DATA: 5
+        SLOT: 12
+      SANDSTONE:
+        NAME: '&bSandstone Block &7(x16)'
+        MATERIAL: 'SANDSTONE'
+        SLOT: 20
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'SANDSTONE'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      CHISELED_SANDSTONE:
+        NAME: '&bChiseled Sandstone Block &7(x16)'
+        MATERIAL: 'SANDSTONE'
+        SLOT: 21
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'SANDSTONE'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      SMOOTH_SANDSTONE:
+        NAME: '&bSmooth Sandstone Block &7(x16)'
+        MATERIAL: 'SANDSTONE'
+        SLOT: 22
+        AMOUNT: 16
+        DATA: 2
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'SANDSTONE'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 2
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      RED_SANDSTONE:
+        NAME: '&bRed Sandstone Block &7(x16)'
+        MATERIAL: 'RED_SANDSTONE'
+        SLOT: 23
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'RED_SANDSTONE'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      CHISELED_RED_SANDSTONE:
+        NAME: '&bChiseled Red Sandstone Block &7(x16)'
+        MATERIAL: 'RED_SANDSTONE'
+        SLOT: 24
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        DATA: 1
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'RED_SANDSTONE'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      SMOOTH_RED_SANDSTONE:
+        NAME: '&bSmooth Red Sandstone Block &7(x16)'
+        MATERIAL: 'RED_SANDSTONE'
+        SLOT: 25
+        AMOUNT: 16
+        DATA: 2
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'RED_SANDSTONE'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 2
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+  WOOLS:
+    TITLE: '&dWool Blocks'
+    SIZE: 54
+    BUTTONS:
+      GLASS_OPEN:
+        NAME: '&aCurrently Open'
+        MATERIAL: 'STAINED_GLASS_PANE'
+        DATA: 5
+        SLOT: 13
+      WHITE_WOOL:
+        NAME: '&bWhite Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 20
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      ORANGE_WOOL:
+        NAME: '&bOrange Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 21
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      MAGENTA_WOOL:
+        NAME: '&bMagenta Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 22
+        AMOUNT: 16
+        DATA: 2
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 2
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIGHT_BLUE_WOOL:
+        NAME: '&bLight Blue Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 23
+        AMOUNT: 16
+        DATA: 3
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 3
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      YELLOW_WOOL:
+        NAME: '&bYellow Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 24
+        AMOUNT: 16
+        DATA: 4
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 4
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIME_WOOL:
+        NAME: '&bLime Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 25
+        AMOUNT: 16
+        DATA: 5
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 5
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PINK_WOOL:
+        NAME: '&bPink Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 26
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        DATA: 6
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 6
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      GRAY_WOOL:
+        NAME: '&bGray Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 29
+        AMOUNT: 16
+        DATA: 7
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 7
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIGHT_GRAY_WOOL:
+        NAME: '&bLight Gray Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 30
+        AMOUNT: 16
+        DATA: 8
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 8
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      CYAN_WOOL:
+        NAME: '&bCyan Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 31
+        AMOUNT: 16
+        DATA: 9
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 9
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PURPLE_WOOL:
+        NAME: '&bPurple Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 32
+        AMOUNT: 16
+        DATA: 10
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 10
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BLUE_WOOL:
+        NAME: '&bBlue Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 33
+        AMOUNT: 16
+        DATA: 11
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 11
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BROWN_WOOL:
+        NAME: '&bBrown Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 34
+        AMOUNT: 16
+        DATA: 12
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 12
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      GREEN_WOOL:
+        NAME: '&bGreen Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 35
+        AMOUNT: 16
+        DATA: 13
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 13
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      RED_WOOL:
+        NAME: '&bRed Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 38
+        AMOUNT: 16
+        DATA: 14
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 14
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BLACK_WOOL:
+        NAME: '&bBlack Wool &7(x16)'
+        MATERIAL: 'WOOL'
+        SLOT: 39
+        AMOUNT: 16
+        DATA: 15
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WOOL'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 15
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+  STAINED_GLASS:
+    TITLE: '&dStained Glass'
+    SIZE: 54
+    BUTTONS:
+      GLASS_OPEN:
+        NAME: '&aCurrently Open'
+        MATERIAL: 'STAINED_GLASS_PANE'
+        DATA: 5
+        SLOT: 14
+      WHITE_GLASS:
+        NAME: '&bWhite Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 20
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      ORANGE_GLASS:
+        NAME: '&bOrange Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 21
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      MAGENTA_GLASS:
+        NAME: '&bMagenta Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 22
+        AMOUNT: 16
+        DATA: 2
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 2
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIGHT_BLUE_GLASS:
+        NAME: '&bLight Blue Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 23
+        AMOUNT: 16
+        DATA: 3
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 3
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      YELLOW_GLASS:
+        NAME: '&bYellow Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 24
+        AMOUNT: 16
+        DATA: 4
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 4
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIME_GLASS:
+        NAME: '&bLime Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 25
+        AMOUNT: 16
+        DATA: 5
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 5
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PINK_GLASS:
+        NAME: '&bPink Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 26
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        DATA: 6
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 6
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      GRAY_GLASS:
+        NAME: '&bGray Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 29
+        AMOUNT: 16
+        DATA: 7
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 7
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIGHT_GRAY_GLASS:
+        NAME: '&bLight Gray Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 30
+        AMOUNT: 16
+        DATA: 8
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 8
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      CYAN_GLASS:
+        NAME: '&bCyan Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 31
+        AMOUNT: 16
+        DATA: 9
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 9
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PURPLE_GLASS:
+        NAME: '&bPurple Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 32
+        AMOUNT: 16
+        DATA: 10
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 10
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BLUE_GLASS:
+        NAME: '&bBlue Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 33
+        AMOUNT: 16
+        DATA: 11
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 11
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BROWN_GLASS:
+        NAME: '&bBrown Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 34
+        AMOUNT: 16
+        DATA: 12
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 12
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      GREEN_GLASS:
+        NAME: '&bGreen Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 35
+        AMOUNT: 16
+        DATA: 13
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 13
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      RED_GLASS:
+        NAME: '&bRed Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 38
+        AMOUNT: 16
+        DATA: 14
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 14
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BLACK_GLASS:
+        NAME: '&bBlack Glass &7(x16)'
+        MATERIAL: 'STAINED_GLASS'
+        SLOT: 39
+        AMOUNT: 16
+        DATA: 15
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_GLASS'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 15
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+  STAINED_CLAY:
+    TITLE: '&dStained Clay'
+    SIZE: 54
+    BUTTONS:
+      GLASS_OPEN:
+        NAME: '&aCurrently Open'
+        MATERIAL: 'STAINED_GLASS_PANE'
+        DATA: 5
+        SLOT: 15
+      WHITE_CLAY:
+        NAME: '&bWhite Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 20
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      ORANGE_CLAY:
+        NAME: '&bOrange Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 21
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      MAGENTA_CLAY:
+        NAME: '&bMagenta Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 22
+        AMOUNT: 16
+        DATA: 2
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 2
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIGHT_BLUE_CLAY:
+        NAME: '&bLight Blue Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 23
+        AMOUNT: 16
+        DATA: 3
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 3
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      YELLOW_CLAY:
+        NAME: '&bYellow Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 24
+        AMOUNT: 16
+        DATA: 4
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 4
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIME_CLAY:
+        NAME: '&bLime Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 25
+        AMOUNT: 16
+        DATA: 5
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 5
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PINK_CLAY:
+        NAME: '&bPink Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 26
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        DATA: 6
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 6
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      GRAY_CLAY:
+        NAME: '&bGray Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 29
+        AMOUNT: 16
+        DATA: 7
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 7
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LIGHT_GRAY_CLAY:
+        NAME: '&bLight Gray Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 30
+        AMOUNT: 16
+        DATA: 8
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 8
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      CYAN_CLAY:
+        NAME: '&bCyan Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 31
+        AMOUNT: 16
+        DATA: 9
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 9
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PURPLE_CLAY:
+        NAME: '&bPurple Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 32
+        AMOUNT: 16
+        DATA: 10
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 10
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BLUE_CLAY:
+        NAME: '&bBlue Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 33
+        AMOUNT: 16
+        DATA: 11
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 11
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BROWN_CLAY:
+        NAME: '&bBrown Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 34
+        AMOUNT: 16
+        DATA: 12
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 12
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      GREEN_CLAY:
+        NAME: '&bGreen Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 35
+        AMOUNT: 16
+        DATA: 13
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 13
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      RED_CLAY:
+        NAME: '&bRed Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 38
+        AMOUNT: 16
+        DATA: 14
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 14
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BLACK_CLAY:
+        NAME: '&bBlack Clay &7(x16)'
+        MATERIAL: 'STAINED_CLAY'
+        SLOT: 39
+        AMOUNT: 16
+        DATA: 15
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 15
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+  NETHER_BLOCKS:
+    TITLE: '&dNether Blocks'
+    SIZE: 54
+    BUTTONS:
+      GLASS_OPEN:
+        NAME: '&aCurrently Open'
+        MATERIAL: 'STAINED_GLASS_PANE'
+        DATA: 5
+        SLOT: 16
+      NETHER_BRICK:
+        NAME: '&bNether Brick &7(x16)'
+        MATERIAL: 'NETHER_BRICK'
+        SLOT: 20
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'NETHER_BRICK'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      QUARTZ_BLOCK:
+        NAME: '&bQuartz Block &7(x16)'
+        MATERIAL: 'QUARTZ_BLOCK'
+        SLOT: 21
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'QUARTZ_BLOCK'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      CHISELED_QUARTZ_BLOCK:
+        NAME: '&bChiseled Quartz Block &7(x16)'
+        MATERIAL: 'QUARTZ_BLOCK'
+        SLOT: 22
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'QUARTZ_BLOCK'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PILLAR_QUARTZ_BLOCK:
+        NAME: '&bPillar Quartz Block &7(x16)'
+        MATERIAL: 'QUARTZ_BLOCK'
+        SLOT: 23
+        AMOUNT: 16
+        DATA: 2
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'QUARTZ_BLOCK'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 2
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      SOUL_SAND:
+        NAME: '&bSoul Sand &7(x16)'
+        MATERIAL: 'SOUL_SAND'
+        SLOT: 24
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'SOUL_SAND'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      NETHERRACK:
+        NAME: '&bNetherrack &7(x16)'
+        MATERIAL: 'NETHERRACK'
+        SLOT: 25
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'NETHERRACK'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      QUARTZ_ORE:
+        NAME: '&bQuartz Ore &7(x16)'
+        MATERIAL: 'QUARTZ_ORE'
+        SLOT: 26
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'QUARTZ_ORE'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+  DECORATIONS:
+    TITLE: '&dDecorations'
+    SIZE: 54
+    BUTTONS:
+      GLASS_OPEN:
+        NAME: '&aCurrently Open'
+        MATERIAL: 'STAINED_GLASS_PANE'
+        DATA: 5
+        SLOT: 17
+      OAK_LEAVES:
+        NAME: '&bOak Leaves &7(x16)'
+        MATERIAL: 'LEAVES'
+        SLOT: 20
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'LEAVES'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      SPRUCE_LEAVES:
+        NAME: '&bSpruce Leaves &7(x16)'
+        MATERIAL: 'LEAVES'
+        SLOT: 21
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'STAINED_CLAY'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      BIRCH_LEAVES:
+        NAME: '&bBirch Leaves &7(x16)'
+        MATERIAL: 'LEAVES'
+        SLOT: 22
+        AMOUNT: 16
+        DATA: 2
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'LEAVES'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 2
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      JUNGLE_LEAVES:
+        NAME: '&bJungle Leaves &7(x16)'
+        MATERIAL: 'LEAVES'
+        SLOT: 23
+        AMOUNT: 16
+        DATA: 3
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'LEAVES'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 3
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      ACACIA_LEAVES:
+        NAME: '&bAcacia Leaves &7(x16)'
+        MATERIAL: 'LEAVES_2'
+        SLOT: 24
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'LEAVES_2'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      DARK_OAK_LEAVES:
+        NAME: '&bDark Oak Leaves &7(x16)'
+        MATERIAL: 'LEAVES_2'
+        SLOT: 25
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'LEAVES_2'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      VINES:
+        NAME: '&bVines &7(x16)'
+        MATERIAL: 'VINE'
+        SLOT: 26
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'VINE'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PUMPKIN:
+        NAME: '&bPumpkin &7(x16)'
+        MATERIAL: 'PUMPKIN'
+        SLOT: 29
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'PUMPKIN'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      JACK_O_LANTERN:
+        NAME: '&bJack O''Lantern &7(x16)'
+        MATERIAL: 'JACK_O_LANTERN'
+        SLOT: 30
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'JACK_O_LANTERN'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      JUKEBOX:
+        NAME: '&bJukebox &7(x16)'
+        MATERIAL: 'JUKEBOX'
+        SLOT: 31
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'JUKEBOX'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LILY_PAD:
+        NAME: '&bLily Pad &7(x16)'
+        MATERIAL: 'WATER_LILY'
+        SLOT: 32
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'WATER_LILY'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      LILAC:
+        NAME: '&bLilac &7(x16)'
+        MATERIAL: 'DOUBLE_PLANT'
+        SLOT: 33
+        AMOUNT: 16
+        DATA: 1
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'DOUBLE_PLANT'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 1
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      ROSE_BUSH:
+        NAME: '&bRose Bush &7(x16)'
+        MATERIAL: 'DOUBLE_PLANT'
+        SLOT: 34
+        AMOUNT: 16
+        DATA: 4
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'DOUBLE_PLANT'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 4
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      PEONY:
+        NAME: '&bPeony &7(x16)'
+        MATERIAL: 'DOUBLE_PLANT'
+        SLOT: 35
+        AMOUNT: 16
+        DATA: 5
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'DOUBLE_PLANT'
+          PRICE: 500
+          AMOUNT: 16
+          DATA: 5
+          SOUND_NO_MONEY: 'ITEM_BREAK'
+      FLOWER_POT:
+        NAME: '&bFlower Pot &7(x16)'
+        MATERIAL: 'FLOWER_POT_ITEM'
+        SLOT: 38
+        AMOUNT: 16
+        SOUND: 'ORB_PICKUP'
+        LORE:
+          - '&ePrice: &2$&a500'
+        BUY_BLOCK:
+          MATERIAL: 'FLOWER_POT_ITEM'
+          PRICE: 500
+          AMOUNT: 16
+          SOUND_NO_MONEY: 'ITEM_BREAK'
